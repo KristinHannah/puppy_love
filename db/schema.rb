@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191031014713) do
+ActiveRecord::Schema.define(version: 20191031024702) do
 
-  create_table "attributes", force: :cascade do |t|
-    t.integer  "dog_id"
+  create_table "atts_tables", force: :cascade do |t|
+    t.integer  "dog_breed_id"
     t.integer  "user_id"
     t.boolean  "apartment_friendly"
     t.boolean  "hypoallergenic"
@@ -28,13 +28,14 @@ ActiveRecord::Schema.define(version: 20191031014713) do
     t.string   "origins"
     t.string   "life_span"
     t.string   "group"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "atts_table_id"
   end
 
   create_table "matches", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "dog_id"
+    t.integer  "dog_breed_id"
     t.string   "comment_field"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -45,6 +46,7 @@ ActiveRecord::Schema.define(version: 20191031014713) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "atts_table_id"
   end
 
 end
