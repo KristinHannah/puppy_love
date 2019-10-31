@@ -35,3 +35,5 @@ Migrating to CreateMatches (20191031014713)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "attributes" ("user_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-10-31 02:01:17.787513"], ["updated_at", "2019-10-31 02:01:17.787513"]]
   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAttribute Load (7.9ms)[0m  [1m[34mSELECT "attributes".* FROM "attributes"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
