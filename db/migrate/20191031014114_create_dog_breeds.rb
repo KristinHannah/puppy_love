@@ -4,10 +4,6 @@ class CreateDogBreeds < ActiveRecord::Migration[5.0]
       t.string :origins
       t.string :life_span
       t.string :group
-      t.boolean :apartment_friendly
-      t.boolean :hypoallergenic
-      t.boolean :pet_friendly
-      t.boolean :noise
 
       t.timestamps
     end
