@@ -26,3 +26,12 @@ Migrating to CreateMatches (20191031014713)
   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-31 01:51:28.387111"], ["updated_at", "2019-10-31 01:51:28.387111"]]
   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Chihuaha"], ["origins", "South America"], ["life_span", "5-18 years"], ["group", "companion"], ["created_at", "2019-10-31 01:55:54.838306"], ["updated_at", "2019-10-31 01:55:54.838306"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "kk@gmail.com"], ["password_digest", "password"], ["created_at", "2019-10-31 01:57:31.729878"], ["updated_at", "2019-10-31 01:57:31.729878"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "attributes" ("user_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-10-31 02:01:17.787513"], ["updated_at", "2019-10-31 02:01:17.787513"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
