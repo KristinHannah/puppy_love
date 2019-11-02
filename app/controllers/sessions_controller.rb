@@ -6,14 +6,20 @@ class SessionsController < ApplicationController
 
     def create 
         params.permit!
-        user = User.find_by(:email => params[:email])
-        if user && user.authenticate(params[:password_digest])
-            session[:user_id] = user.id 
 
-            redirect_to root_path
+        if auth_hash = request.env["omniauth.auth"]
+            #logged in via facebook
         else 
-            render '/login'
-        end 
+            #logged in normal
+         user = User.find_by(:email => params[:email])
+            if user && user.authenticate(params[:password_digest])
+                session[:user_id] = user.id 
+
+                redirect_to root_path
+            else 
+                render '/login'
+            end 
+         end 
     end 
 
     def destroy         
