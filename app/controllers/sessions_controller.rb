@@ -6,17 +6,19 @@ class SessionsController < ApplicationController
 
     def create 
         params.permit!
-        if params[:user][:email].nil? || params[:user][:email] == ''
-            redirect_to '/login'
+        user = User.find_by(:email => params[:email])
+        if user && user.authenticate(params[:password_digest])
+            session[:user_id] = user.id 
+
+            redirect_to root_path
         else 
-            @user = User.find_by(email: params[:user][:email])
-            return head(:forbidden) unless @user.authenticate(params[:user][:password_digest])
-            session[:user_id] = @user.id
+            render '/login'
         end 
     end 
 
     def destroy         
-        session.delete :name 
+        session.delete :email 
+        redirect_to '/login'
     end 
 
 end 
