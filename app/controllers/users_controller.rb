@@ -7,7 +7,11 @@ class UsersController < ApplicationController
     def create 
         @user = User.new 
         @user.email = params[:user][:email]
-        @user.save 
+        if @user.save 
+            redirect_to root_path 
+        else 
+            render :new 
+        end 
     end 
 
     private 
