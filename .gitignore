@@ -12,8 +12,8 @@
 
 .ENV 
 
-# Used by dotenv library to load environment variables.
-# .env
+ Used by dotenv library to load environment variables.
+ .env
 
 ## Specific to RubyMotion:
 .dat*
