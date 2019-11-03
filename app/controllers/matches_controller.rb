@@ -17,6 +17,10 @@ class MatchesController < ApplicationController
         redirect_to root_path
     end 
 
+    def show 
+        @match = Match.find(params[:id])
+    end 
+
 
     private
 

@@ -1,0 +1,9 @@
+<% @dog_breed = DogBreed.find(@match.dog_breed_id) %>
+<h1> You and <%= @dog_breed.name %> </h1>
+
+<p> Origins: <%= @dog_breed.origins %> </p>
+<p> Life Span: <%= @dog_breed.life_span %> </p>
+<p> Group: <%= @dog_breed.group %> </p>
+
+<% @dog_atts = @dog_breed.atts_table %>
+<p> Group: <%= @dog_breed.group %> </p>
