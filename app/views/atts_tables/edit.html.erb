@@ -1,0 +1,7 @@
+<%= form_for :atts_table do |f| %>
+<p> Do you live in an apartment? </p> <%= f.check_box :apartment_friendly %>
+<p> Do you or one of the members of your household have allergies to pets? </p> <%= f.check_box :hypoallergenic %>
+<p> Do you have any other pets in your home? </p> <%= f.check_box :pet_friendly %>
+<p> Could you live with a dog that barks or howls? </p> <%= f.check_box :noise %>
+<%= f.submit %>
+<% end %>
