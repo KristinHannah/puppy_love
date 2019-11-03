@@ -11,7 +11,7 @@ class MatchesController < ApplicationController
 
     def create
         params.permit!
-        
+        params(:user_id)
     end 
 
     
