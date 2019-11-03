@@ -7,8 +7,10 @@ class AttsTablesController < ApplicationController
 
     def create 
         @atts_table = AttsTable.create(atts_table_params)
-        @atts_table.user_id = session[:user_id]
-        @atts_table.save 
+        user = User.find(session[:user_id])
+        @atts_table.user_id = user.id 
+        user.assign_atts(@atts_table)
+        user.save 
         redirect_to atts_table_path(@atts_table)
     end 
 
