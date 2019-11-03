@@ -30,5 +30,12 @@ class User < ApplicationRecord
     matches
     end
 
+    def match_accesser 
+       find_user_matches = Match.select {|u| u.user_id == self.id}
+       dog_breed_ids = []
+       find_user_matches.each do | match |
+        dog_breed_ids << match.dog_breed_id
+       end 
+    end 
 
 end

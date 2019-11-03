@@ -11,10 +11,12 @@ class MatchesController < ApplicationController
 
     def create
         params.permit!
-        params(:user_id)
+        user = User.find(params[:user_id])
+        matches = user.matcher 
+        Match.match_creater(user.id, matches)
+        redirect_to root_path
     end 
 
-    
 
     private
 
