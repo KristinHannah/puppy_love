@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Puppy Love</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+<%= link_to "login", login_path%>
+<%= link_to "All Dog Breeds", dog_breeds_path %>
+<%= link_to "User Home", root_path %>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>
