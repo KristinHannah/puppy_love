@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :matches
-  resources :attributes
+  resources :atts_tables
   resources :dog_breeds
   resources :users
   get '/login' => 'sessions#new'
