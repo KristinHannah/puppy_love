@@ -12,9 +12,7 @@
 <% matches = @user.match_accesser %>
 
 <% matches.each do |match| %>
-<% dog = DogBreed.find(match) %>
-<p> Name: <%= "#{dog.name}" %> </p> <br>
-<p> Origins: <%= "#{dog.origins}" %> </p> <br>
-<p> Life Span: <%= "#{dog.life_span}" %> </p> <br>
-<p> Group: <%= "#{dog.group}" %> </p> <br>
+<% dog = DogBreed.find(match.dog_breed_id) %>
+<p> <%= link_to "#{dog.name}", match_path(match) %> </p> <br>
+
 <% end %>
