@@ -1979,3 +1979,4 @@ Processing by AttsTablesController#show as HTML
 Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.2ms)
 
 
+  [1m[36mDogBreed Load (17.2ms)[0m  [1m[34mSELECT "dog_breeds".* FROM "dog_breeds"[0m
