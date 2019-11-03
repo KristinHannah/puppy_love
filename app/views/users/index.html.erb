@@ -6,3 +6,14 @@
     <%= link_to "Enter Your Preferences Here", new_atts_table_path %>
 <% end %>
 
+<br>
+
+<% matches = @user.match_accesser %>
+
+<% matches.each do |match| %>
+<% dog = DogBreed.find(match) %>
+<p> Name: <%= "#{dog.name}" %> </p> <br>
+<p> Origins: <%= "#{dog.origins}" %> </p> <br>
+<p> Life Span: <%= "#{dog.life_span}" %> </p> <br>
+<p> Group: <%= "#{dog.group}" %> </p> <br>
+<% end %>
