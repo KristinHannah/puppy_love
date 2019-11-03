@@ -13,7 +13,7 @@ class AttsTablesController < ApplicationController
     end 
 
     def show 
-
+        @atts_table = AttsTable.find(params[:id])
     end
 
     private 
@@ -23,7 +23,7 @@ class AttsTablesController < ApplicationController
     end 
 
     def atts_table_params 
-        params.require(:atts_table).permit(:apartment_friendly, :hypoallergenic, :pet_friendly, :noise, :user_id)
+        params.require(:atts_table).permit(:id, :apartment_friendly, :hypoallergenic, :pet_friendly, :noise, :user_id)
     end 
 end
 
