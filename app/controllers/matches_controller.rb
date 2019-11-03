@@ -5,6 +5,15 @@ class MatchesController < ApplicationController
 
     end 
 
+    def new 
+
+    end 
+
+    def create
+        params.permit!
+        
+    end 
+
     
 
     private
@@ -12,4 +21,6 @@ class MatchesController < ApplicationController
     def require_login 
         return head(:forbidden) unless session.include? :user_id
     end 
+
+
 end

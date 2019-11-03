@@ -1,1 +1,7 @@
-<h1> Hellooooo Root path  </h1>
+<h1> Hellooooo <%= @user.email %> </h1>
+<% if @user.atts_table_id != nil %>
+    <% @atts_table = AttsTable.find(@user.atts_table_id) %>
+    <%= link_to "Your Preferences", atts_table_path(@atts_table)%>
+<% else %>
+    <%= link_to "Enter Your Preferences Here", new_atts_table_path %>
+<% end %>
