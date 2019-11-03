@@ -21,6 +21,18 @@ class MatchesController < ApplicationController
         @match = Match.find(params[:id])
     end 
 
+    def edit 
+        @match = Match.find(params[:id])
+        @match.comment_field = match_params
+        @match.save
+        redirect_to match_path(@match)
+    end
+
+    def destroy 
+        @match = Match.find(params[:id])
+        @match.delete 
+    end 
+
 
     private
 
@@ -28,5 +40,8 @@ class MatchesController < ApplicationController
         return head(:forbidden) unless session.include? :user_id
     end 
 
+    def match_params
+        params.require(:match).permit(:comment_field)
+    end 
 
 end

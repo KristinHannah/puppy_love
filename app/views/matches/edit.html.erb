@@ -11,4 +11,9 @@
 <p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
 <p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
 
-<%= link_to "Edit Your Match", edit_match_path(@match) %>
+<% form_for(@match) do |f| %>
+<p> What do you think of this match? </p> <%= f.text_field :comment_field %>
+<%= f.submit %>
+<% end %>
+
+<%= link_to "Delete Your Match", match_path(@match), :method => :delete %>
