@@ -44,22 +44,48 @@ atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hyp
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: 'Bernese Mountain', origins: , life_span: , group: )
+dog_1 = DogBreed.create(name: 'Bernese Mountain', origins: 'Swiss', life_span: '6-10 years', group: 'working')
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true)
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: 'Boxer', origins: , life_span: , group: )
-atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: , hypoallergenic: pet_friendly: , noise: )
+dog_1 = DogBreed.create(name: 'Boxer', origins: 'German', life_span: '10-12 years', group: 'working')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: true, noise: true)
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: 'Great Dane', origins: , life_span: , group: )
-atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: , hypoallergenic: pet_friendly: , noise: )
+dog_1 = DogBreed.create(name: 'Great Dane', origins: 'The Middle East', life_span: '7-10 years', group: 'working')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true)
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: 'Rottweiler', origins: , life_span: , group: )
-atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: , hypoallergenic: pet_friendly: , noise: )
+dog_1 = DogBreed.create(name: 'Rottweiler', origins: 'Germany', life_span: '8-11 years', group: 'working')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: false, noise: true)
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
+
+
+dog_1 = DogBreed.create(name: 'Golden Retriever', origins: 'Scotland', life_span: '10-12 years', group: 'Sporting')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true)
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
+dog_1 = DogBreed.create(name: 'Irish Setter', origins: 'Ireland', life_span: '11-15 years', group: 'sporting')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true)
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
+dog_1 = DogBreed.create(name: 'Labrador Retriever', origins: "Newfoundland", life_span: '10-12 years', group: 'sporting')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true)
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
+dog_1 = DogBreed.create(name: 'Cocker Spaniel', origins: 'Spain', life_span: '12-15 years', group: 'sporting')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: true, noise: true)
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
