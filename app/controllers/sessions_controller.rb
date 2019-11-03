@@ -6,18 +6,14 @@ class SessionsController < ApplicationController
 
     def create 
         params.permit!
-        user_info = request.env['omniauth.auth']
-        if  user_info = request.env['omniauth.auth']
+       # user_info = request.env['omniauth.auth']
+        if  auth_hash = request.env['omniauth.auth']
             #logged in via facebook
-            oauth_email = request.env["omniauth.auth"]["info"]["email"]
-            if user = User.find_by(:email => oauth_email)
-                session[:user_id] = user.id
-                redirect_to root_path
-            else 
-                user = User.new(:email => oauth_email)
-                session[:user_id] = user.id
-                redirect_to root_path 
-            end 
+            user = User.find_or_create_by_omniauth(auth_hash)
+            session[:user_id] = user.id 
+
+            redirect to root_path
+
         else 
             #logged in normal
          user = User.find_by(:email => params[:email])
@@ -36,5 +32,6 @@ class SessionsController < ApplicationController
         redirect_to '/login'
     end 
 
+  
 end 
 
