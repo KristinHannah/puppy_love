@@ -11,4 +11,8 @@
 <p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
 <p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
 
+<% if @match.comment_field != nil %>
+    <p> Your Comments: <%= @match.comment_field %> </p>
+<% end %>
+
 <%= link_to "Edit Your Match", edit_match_path(@match) %>

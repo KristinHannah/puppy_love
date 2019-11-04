@@ -23,10 +23,14 @@ class MatchesController < ApplicationController
 
     def edit 
         @match = Match.find(params[:id])
-        @match.comment_field = match_params
+    end
+
+    def update 
+        @match = Match.find(params[:id])
+        @match.comment_field = params[:match][:comment_field]
         @match.save
         redirect_to match_path(@match)
-    end
+    end 
 
     def destroy 
         @match = Match.find(params[:id])
@@ -40,8 +44,5 @@ class MatchesController < ApplicationController
         return head(:forbidden) unless session.include? :user_id
     end 
 
-    def match_params
-        params.require(:match).permit(:comment_field)
-    end 
 
 end
