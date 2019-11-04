@@ -1,0 +1,11 @@
+<h1> <%= @dog.name %> </h1>
+
+<p> Origins: <%= @dog.origins %> </p>
+<p> Life Span: <%= @dog.life_span %> </p>
+<p> Group: <%= @dog.group %> </p>
+
+<% @dog_atts = @dog.atts_table %>
+<p> Is this dog apartment friendly? <%= @dog_atts.apartment_friendly %> </p>
+<p> Is this dog hypoallergenic? <%= @dog_atts.hypoallergenic %> </p>
+<p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
+<p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
