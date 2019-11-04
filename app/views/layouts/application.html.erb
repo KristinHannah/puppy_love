@@ -11,7 +11,7 @@
 <nav>
 <%= link_to "login", login_path%>
 <%= link_to "All Dog Breeds", dog_breeds_path %>
-<%= link_to "User Home", root_path %>
+<%= link_to "User Home", users_path %>
 </nav>
 
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>

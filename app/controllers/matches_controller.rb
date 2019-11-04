@@ -14,7 +14,7 @@ class MatchesController < ApplicationController
         user = User.find(params[:user_id])
         matches = user.matcher 
         Match.match_creater(user.id, matches)
-        redirect_to root_path
+        redirect_to users_path
     end 
 
     def show 
