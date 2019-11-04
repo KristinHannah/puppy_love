@@ -88,4 +88,10 @@ atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypo
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
+dog_1 = DogBreed.create(name: 'Yorkshire Terrier', origins: 'England', life_span: '12-15 years', group: 'companion')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: true, pet_friendly: true, noise: true)
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
 
