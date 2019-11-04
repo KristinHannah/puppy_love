@@ -14,6 +14,10 @@
 <%= link_to "User Home", root_path %>
 </nav>
 
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='logout'>
+<% end %>
+
 <%= yield %>
 
 </body>
