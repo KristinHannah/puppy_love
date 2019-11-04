@@ -11,3 +11,5 @@
 <input type="submit" value="Create Match">
 <% end %>
 
+<p> <%= link_to "Edit Your Preferences Here", edit_atts_table_path(@atts_table) %></p>
+<p> <%= link_to "Delete Your Preferences", atts_table_path(@atts_table), :method => :delete %> </p>
