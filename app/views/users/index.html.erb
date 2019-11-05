@@ -1,7 +1,7 @@
 <h1> Hellooooo <%= @user.email %> </h1>
 
 <% if @user.atts_table != nil %>
-    <% @atts_table = AttsTable.find(@user.atts_table) %>
+    <% @atts_table = @user.atts_table %>
     <%= link_to "Your Preferences", atts_table_path(@atts_table)%>
 <% else %>
     <%= link_to "Enter Some Information about yourself to start getting matches", edit_user_path(@user) %>

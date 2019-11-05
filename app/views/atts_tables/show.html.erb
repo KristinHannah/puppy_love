@@ -5,6 +5,8 @@
 <p> Do you or one of the members of your household have allergies to pets? </p> <%= @atts_table.hypoallergenic %>
 <p> Do you have any other pets in your home? </p> <%= @atts_table.pet_friendly %>
 <p> Could you live with a dog that barks or howls? </p> <%= @atts_table.noise %>
+<p> Do you live in a cold climate? </p> <%= @atts_table.cold_weather %>
+<p> What size dog do you prefernce? </p> <%= @atts_table.size%>
 
 <%= form_tag('/matches') do %>
 <%= hidden_field_tag('user_id', @atts_table.user_id)%>
