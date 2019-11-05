@@ -17,6 +17,15 @@ class AttsTablesController < ApplicationController
         @atts_table = AttsTable.find(params[:id])
     end
 
+    def destroy 
+        @atts_table = AttsTable.find(params[:id])
+        @user = User.find(@atts_table.user_id)
+        @user.atts_table_id = nil 
+
+        redirect_to users_path
+    end 
+
+
     private 
 
     def require_login 
