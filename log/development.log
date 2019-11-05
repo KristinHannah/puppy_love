@@ -11009,3 +11009,5 @@ Migrating to AddColsToAttsTable (20191105013923)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.196907"], ["atts_table_id", 22], ["id", 22]]
   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDogBreed Load (14.7ms)[0m  [1m[34mSELECT "dog_breeds".* FROM "dog_breeds"[0m
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "dog_breeds"[0m
