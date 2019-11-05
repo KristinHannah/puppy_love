@@ -10798,3 +10798,214 @@ Migrating to ReCreateMatches (20191031024702)
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-05 01:32:39.369751"], ["updated_at", "2019-11-05 01:32:39.369751"]]
   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColsToAttsTable (20191105013923)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "atts_tables" ADD "cold_weather" boolean[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "atts_tables" ADD "size" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191105013923"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Chihuahua"], ["origins", "South America"], ["life_span", "5-18 year"], ["group", "companion"], ["created_at", "2019-11-05 01:43:02.942742"], ["updated_at", "2019-11-05 01:43:02.942742"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 1], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "t"], ["created_at", "2019-11-05 01:43:02.967662"], ["updated_at", "2019-11-05 01:43:02.967662"], ["cold_weather", "f"], ["size", "small"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:02.971184"], ["atts_table_id", 1], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tibetan Spaniel"], ["origins", "Tibet"], ["life_span", "12-15 years"], ["group", "Non-sporting"], ["created_at", "2019-11-05 01:43:02.974236"], ["updated_at", "2019-11-05 01:43:02.974236"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 2], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:02.976902"], ["updated_at", "2019-11-05 01:43:02.976902"], ["cold_weather", "f"], ["size", "small"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:02.979771"], ["atts_table_id", 2], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Poodle"], ["origins", "Germany"], ["life_span", "10-18 years"], ["group", "Non-sporting"], ["created_at", "2019-11-05 01:43:02.983228"], ["updated_at", "2019-11-05 01:43:02.983228"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 3], ["apartment_friendly", "t"], ["hypoallergenic", "t"], ["pet_friendly", "t"], ["noise", "f"], ["created_at", "2019-11-05 01:43:02.986436"], ["updated_at", "2019-11-05 01:43:02.986436"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:02.989604"], ["atts_table_id", 3], ["id", 3]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Beagle"], ["origins", "Uncertain"], ["life_span", "10-15 years"], ["group", "hound"], ["created_at", "2019-11-05 01:43:02.993105"], ["updated_at", "2019-11-05 01:43:02.993105"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 4], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:02.996127"], ["updated_at", "2019-11-05 01:43:02.996127"], ["cold_weather", "f"], ["size", "medium"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:02.999587"], ["atts_table_id", 4], ["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bichon Frise"], ["origins", "Mediterranean"], ["life_span", "12-15 years"], ["group", "companion"], ["created_at", "2019-11-05 01:43:03.003167"], ["updated_at", "2019-11-05 01:43:03.003167"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 5], ["apartment_friendly", "t"], ["hypoallergenic", "t"], ["pet_friendly", "t"], ["noise", "f"], ["created_at", "2019-11-05 01:43:03.006246"], ["updated_at", "2019-11-05 01:43:03.006246"], ["cold_weather", "t"], ["size", "small"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.009118"], ["atts_table_id", 5], ["id", 5]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shih Tzu"], ["origins", "China"], ["life_span", "10-16 years"], ["group", "companion"], ["created_at", "2019-11-05 01:43:03.011926"], ["updated_at", "2019-11-05 01:43:03.011926"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 6], ["apartment_friendly", "t"], ["hypoallergenic", "t"], ["pet_friendly", "t"], ["noise", "f"], ["created_at", "2019-11-05 01:43:03.015560"], ["updated_at", "2019-11-05 01:43:03.015560"], ["cold_weather", "t"], ["size", "small"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.018889"], ["atts_table_id", 6], ["id", 6]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Maltese"], ["origins", "Mediterranean"], ["life_span", "12-15 years"], ["group", "companion"], ["created_at", "2019-11-05 01:43:03.022222"], ["updated_at", "2019-11-05 01:43:03.022222"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 7], ["apartment_friendly", "t"], ["hypoallergenic", "t"], ["pet_friendly", "t"], ["noise", "f"], ["created_at", "2019-11-05 01:43:03.026394"], ["updated_at", "2019-11-05 01:43:03.026394"], ["cold_weather", "f"], ["size", "small"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.029595"], ["atts_table_id", 7], ["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pit Bull Terrier"], ["origins", "England"], ["life_span", "12-16 years"], ["group", "Terrier"], ["created_at", "2019-11-05 01:43:03.032656"], ["updated_at", "2019-11-05 01:43:03.032656"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 8], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.035819"], ["updated_at", "2019-11-05 01:43:03.035819"], ["cold_weather", "f"], ["size", "large"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.040232"], ["atts_table_id", 8], ["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mastiff"], ["origins", "Asia"], ["life_span", "6-10 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.043384"], ["updated_at", "2019-11-05 01:43:03.043384"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 9], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "f"], ["created_at", "2019-11-05 01:43:03.046627"], ["updated_at", "2019-11-05 01:43:03.046627"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.050932"], ["atts_table_id", 9], ["id", 9]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Bernese Mountain"], ["origins", "Swiss"], ["life_span", "6-10 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.055384"], ["updated_at", "2019-11-05 01:43:03.055384"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 10], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.059965"], ["updated_at", "2019-11-05 01:43:03.059965"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.064425"], ["atts_table_id", 10], ["id", 10]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Boxer"], ["origins", "German"], ["life_span", "10-12 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.068407"], ["updated_at", "2019-11-05 01:43:03.068407"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 11], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.072247"], ["updated_at", "2019-11-05 01:43:03.072247"], ["cold_weather", "f"], ["size", "large"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.078105"], ["atts_table_id", 11], ["id", 11]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Great Dane"], ["origins", "The Middle East"], ["life_span", "7-10 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.082444"], ["updated_at", "2019-11-05 01:43:03.082444"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 12], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.086237"], ["updated_at", "2019-11-05 01:43:03.086237"], ["cold_weather", "f"], ["size", "large"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.089988"], ["atts_table_id", 12], ["id", 12]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rottweiler"], ["origins", "Germany"], ["life_span", "8-11 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.093210"], ["updated_at", "2019-11-05 01:43:03.093210"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 13], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.096717"], ["updated_at", "2019-11-05 01:43:03.096717"], ["cold_weather", "f"], ["size", "large"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.100246"], ["atts_table_id", 13], ["id", 13]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Golden Retriever"], ["origins", "Scotland"], ["life_span", "10-12 years"], ["group", "Sporting"], ["created_at", "2019-11-05 01:43:03.103202"], ["updated_at", "2019-11-05 01:43:03.103202"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 14], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.106059"], ["updated_at", "2019-11-05 01:43:03.106059"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.109713"], ["atts_table_id", 14], ["id", 14]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Irish Setter"], ["origins", "Ireland"], ["life_span", "11-15 years"], ["group", "sporting"], ["created_at", "2019-11-05 01:43:03.113178"], ["updated_at", "2019-11-05 01:43:03.113178"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 15], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.116460"], ["updated_at", "2019-11-05 01:43:03.116460"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.120754"], ["atts_table_id", 15], ["id", 15]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Labrador Retriever"], ["origins", "Newfoundland"], ["life_span", "10-12 years"], ["group", "sporting"], ["created_at", "2019-11-05 01:43:03.125137"], ["updated_at", "2019-11-05 01:43:03.125137"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 16], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.128610"], ["updated_at", "2019-11-05 01:43:03.128610"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.132356"], ["atts_table_id", 16], ["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cocker Spaniel"], ["origins", "Spain"], ["life_span", "12-15 years"], ["group", "sporting"], ["created_at", "2019-11-05 01:43:03.135357"], ["updated_at", "2019-11-05 01:43:03.135357"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 17], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.138301"], ["updated_at", "2019-11-05 01:43:03.138301"], ["cold_weather", "t"], ["size", "medium"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.141374"], ["atts_table_id", 17], ["id", 17]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Yorkshire Terrier"], ["origins", "England"], ["life_span", "12-15 years"], ["group", "companion"], ["created_at", "2019-11-05 01:43:03.145975"], ["updated_at", "2019-11-05 01:43:03.145975"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 18], ["apartment_friendly", "t"], ["hypoallergenic", "t"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.149481"], ["updated_at", "2019-11-05 01:43:03.149481"], ["cold_weather", "f"], ["size", "small"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.152409"], ["atts_table_id", 18], ["id", 18]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Akita"], ["origins", "Japan"], ["life_span", "10-12 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.155787"], ["updated_at", "2019-11-05 01:43:03.155787"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 19], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.162760"], ["updated_at", "2019-11-05 01:43:03.162760"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.166283"], ["atts_table_id", 19], ["id", 19]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "German Shepherd"], ["origins", "German"], ["life_span", "10-14 years"], ["group", "herding"], ["created_at", "2019-11-05 01:43:03.169697"], ["updated_at", "2019-11-05 01:43:03.169697"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 20], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "f"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.172983"], ["updated_at", "2019-11-05 01:43:03.172983"], ["cold_weather", "t"], ["size", "large"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.176434"], ["atts_table_id", 20], ["id", 20]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Shiba Inu"], ["origins", "Japan"], ["life_span", "12-16 years"], ["group", "companion"], ["created_at", "2019-11-05 01:43:03.180450"], ["updated_at", "2019-11-05 01:43:03.180450"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 21], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.183556"], ["updated_at", "2019-11-05 01:43:03.183556"], ["cold_weather", "t"], ["size", "small"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.186819"], ["atts_table_id", 21], ["id", 21]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "dog_breeds" ("name", "origins", "life_span", "group", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Siberian Husky"], ["origins", "Siberian nomad tribe, Chukchi"], ["life_span", "12-15 years"], ["group", "working"], ["created_at", "2019-11-05 01:43:03.190373"], ["updated_at", "2019-11-05 01:43:03.190373"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "atts_tables" ("dog_breed_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["dog_breed_id", 22], ["apartment_friendly", "f"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "t"], ["created_at", "2019-11-05 01:43:03.193692"], ["updated_at", "2019-11-05 01:43:03.193692"], ["cold_weather", "t"], ["size", "medium"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "dog_breeds" SET "updated_at" = ?, "atts_table_id" = ? WHERE "dog_breeds"."id" = ?[0m  [["updated_at", "2019-11-05 01:43:03.196907"], ["atts_table_id", 22], ["id", 22]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m

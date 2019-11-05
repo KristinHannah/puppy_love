@@ -89,23 +89,23 @@ dog_1.atts_table_id = atts_1.id
 dog_1.save
 
 
-dog_1 = DogBreed.create(name: ‘Akita’, origins: 'Japan', life_span: '10-12 years', group: 'working')
+dog_1 = DogBreed.create(name: 'Akita', origins: 'Japan', life_span: '10-12 years', group: 'working')
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: false, noise: true, cold_weather: true, size: 'large')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
 
-dog_1 = DogBreed.create(name: ‘German Shepherd’, origins: 'German', life_span: '10-14 years', group: 'herding')
+dog_1 = DogBreed.create(name: 'German Shepherd', origins: 'German', life_span: '10-14 years', group: 'herding')
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: false, noise: true, cold_weather: true, size: 'large')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: ‘Shiba Inu’, origins: 'Japan', life_span: '12-16 years', group: 'companion')
+dog_1 = DogBreed.create(name: 'Shiba Inu', origins: 'Japan', life_span: '12-16 years', group: 'companion')
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: true, noise: true, cold_weather: true, size: 'small')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 
-dog_1 = DogBreed.create(name: ‘Siberian Husky’, origins: 'Siberian nomad tribe, Chukchi', life_span: '12-15 years', group: 'working')
+dog_1 = DogBreed.create(name: 'Siberian Husky', origins: 'Siberian nomad tribe, Chukchi', life_span: '12-15 years', group: 'working')
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true, cold_weather: true, size: 'medium')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save

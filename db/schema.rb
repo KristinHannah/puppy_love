@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191031024702) do
+ActiveRecord::Schema.define(version: 20191105013923) do
 
   create_table "atts_tables", force: :cascade do |t|
     t.integer  "dog_breed_id"
@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20191031024702) do
     t.boolean  "noise"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.boolean  "cold_weather"
+    t.string   "size"
   end
 
   create_table "dog_breeds", force: :cascade do |t|
