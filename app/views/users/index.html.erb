@@ -4,7 +4,7 @@
     <% @atts_table = AttsTable.find(@user.atts_table_id) %>
     <%= link_to "Your Preferences", atts_table_path(@atts_table)%>
 <% else %>
-    <%= link_to "Enter Your Preferences Here", new_user_atts_table_path(@user) %>
+    <%= link_to "Enter Some Information about yourself to start getting matches", edit_user_path(@user) %>
 <% end %>
 
 <br>
