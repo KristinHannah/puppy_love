@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   end 
 
   resources :users, only: [:show, :index] do 
-    resources :atts_tables, only: [:show]
+    resources :atts_tables, only: [:show, :new]
   end 
-  
+
   get '/login' => 'sessions#new'
   get '/signup' => 'users#new'
   post '/sessions' => 'sessions#create'

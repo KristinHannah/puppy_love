@@ -16,9 +16,6 @@ class AttsTablesController < ApplicationController
 
     def destroy 
         @atts_table = AttsTable.find(params[:id])
-        @user = User.find(@atts_table.user_id)
-        @user.atts_table_id = nil 
-        @user.save
         @atts_table.destroy
 
         redirect_to users_path
