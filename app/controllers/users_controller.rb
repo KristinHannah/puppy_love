@@ -18,10 +18,30 @@ class UsersController < ApplicationController
     def index 
         @user = User.find(session[:user_id])
     end 
+
+    def edit 
+        @user = User.find(params[:id])
+        @user.atts_table_atts.build
+    end
+
+    def update 
+        @user = User.find(params[:id])
+        @user.update(user_params)
+        @user.save
+        redirect_to user_path(@user)
+    end 
     
     private 
 
     def user_params
-        params.require(:user).permit(:email, :password_digest, :password_confirmation)
+        params.require(:user).permit(:email, :password_digest, :password_confirmation, :name, :city, atts_table_atts: [
+            :apartment_friendly,
+            :pet_friendly,
+            :hypoallergenic,
+            :noise,
+            :cold_weather,
+            :size
+          ])
     end 
 end
+

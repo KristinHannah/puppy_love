@@ -1,7 +1,7 @@
 <%= form_for @user, :url => users_path do |f| %>
     <%= f.text_field :name %>
     <%= f.text_field :city %>
-    <%= fields_for :atts_tables do |atts|%>
+    <%= fields_for :atts_table_atts do |atts|%>
     <p> Do you live in an apartment? </p> 
     <p>Yes</p> <%= atts.radio_button :apartment_friendly, true, :value => true %> 
     <p>No</p> <%= atts.radio_button :apartment_friendly, false, :value => false %> 
