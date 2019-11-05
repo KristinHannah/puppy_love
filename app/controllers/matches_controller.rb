@@ -2,7 +2,11 @@ class MatchesController < ApplicationController
     before_action :require_login
 
     def index 
-
+        if params[:used_id]
+            @matches = User.find(params[:user_id]).matches 
+        else  
+            @matches = Match.all
+        end 
     end 
 
     def new 

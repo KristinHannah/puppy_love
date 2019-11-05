@@ -10,7 +10,7 @@
 <br>
 
 <h2> Your Matches </h2>
-<% matches = @user.match_accesser %>
+<%= link_to "Your Matches", user_matches_path(@user) %>
 
 <% matches.each do |match| %>
 <% dog = DogBreed.find(match.dog_breed_id) %>
