@@ -2,13 +2,12 @@ class AttsTablesController < ApplicationController
     before_action :require_login
 
     def new 
-        @atts_table = AttsTable.new 
+        @atts_table = AttsTable.new(user_id: params[:user_id])
     end 
 
     def create 
         @atts_table = AttsTable.create(atts_table_params)
-        user = User.find(session[:user_id])
-        @atts_table.user_id = user.id 
+        user = User.find(@atts_table.user_id)
         user.assign_atts(@atts_table)
         user.save 
         redirect_to atts_table_path(@atts_table)

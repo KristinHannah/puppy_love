@@ -48,5 +48,7 @@ class MatchesController < ApplicationController
         return head(:forbidden) unless session.include? :user_id
     end 
 
-
+    def match_params
+        params.require(:match).permit(:comment_field, :user_id)
+    end 
 end
