@@ -11662,3 +11662,827 @@ Migrating to AddColsToUser (20191105165117)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/login" for ::1 at 2019-11-05 13:31:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 269ms (Views: 249.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (27.7ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.9ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (192.2ms)
+Started GET "/auth/facebook" for ::1 at 2019-11-05 13:31:21 -0500
+Started GET "/auth/facebook/callback?code=AQCMMOdwPoC-Y3ZvaRqwJ2Y7MtIsXyDuWckjl1hbMN9XUphzyGANBVzfMr037jgZklOuRq60J2GkRxLaog2NB51RHzQtSUBLPVf6lfouS2GKlOczDXmHrssiuFAeL10fxD2Ym8w4UYH5p3VevRacsG2RBNAcYwfa9sUWZlXsvqAPomiBwebTXcZ8J6Kzg4PYFr-_BfaVqpx6OwPbgaA08Jj3e7ace1Jpst_MLh03ExQ0eCXJvna3NOiCFFvq5bCmaFrVqf61KzHj7bSJjN0XAvab9d-4vh_x1iubbHY83VF7XU7AVXOeFQ9T2Q7qiyIClhQ&state=4fec953cdbbf5f1cc33e43dfbe63e88572972b2637731cb1" for ::1 at 2019-11-05 13:31:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCMMOdwPoC-Y3ZvaRqwJ2Y7MtIsXyDuWckjl1hbMN9XUphzyGANBVzfMr037jgZklOuRq60J2GkRxLaog2NB51RHzQtSUBLPVf6lfouS2GKlOczDXmHrssiuFAeL10fxD2Ym8w4UYH5p3VevRacsG2RBNAcYwfa9sUWZlXsvqAPomiBwebTXcZ8J6Kzg4PYFr-_BfaVqpx6OwPbgaA08Jj3e7ace1Jpst_MLh03ExQ0eCXJvna3NOiCFFvq5bCmaFrVqf61KzHj7bSJjN0XAvab9d-4vh_x1iubbHY83VF7XU7AVXOeFQ9T2Q7qiyIClhQ", "state"=>"4fec953cdbbf5f1cc33e43dfbe63e88572972b2637731cb1", "provider"=>"facebook"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 41ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:31:22 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 39ms (Views: 29.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (12.6ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (156.4ms)
+Started GET "/atts_tables/23" for ::1 at 2019-11-05 13:31:24 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:24 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (23.9ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (165.6ms)
+Started DELETE "/atts_tables/23" for ::1 at 2019-11-05 13:31:27 -0500
+Processing by AttsTablesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXhQXGTbGE0s1jUs4MrScIEHVQ1SwS/l/yXFaPC3aQLemKDs7XUt2s0TpTe6vx2g6C3kHFarDXjGMb+kgEvoAw==", "commit"=>"Delete Preferences", "id"=>"23"}
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:31:27 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (18.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (182.7ms)
+Started GET "/atts_tables/23" for ::1 at 2019-11-05 13:31:29 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (18.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (33.3ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (193.8ms)
+Started DELETE "/atts_tables/23" for ::1 at 2019-11-05 13:31:31 -0500
+Processing by AttsTablesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fsxhrAqyyAlvwlWTZ+B2cZtmWgjrK4B9HNadTXZ6VietLJEcgxz9no4HxYg9lbmh8kzrGe9BouAlwueBBobXJg==", "commit"=>"Delete Preferences", "id"=>"23"}
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:31:31 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (12.8ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (166.5ms)
+Started GET "/users" for ::1 at 2019-11-05 13:31:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (13.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (155.7ms)
+Started GET "/atts_tables/23" for ::1 at 2019-11-05 13:31:39 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:31:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (17.1ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (161.4ms)
+Started DELETE "/atts_tables/23" for ::1 at 2019-11-05 13:32:37 -0500
+Processing by AttsTablesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XMVWBI0eONHr+LNKX0WigqbQvbkwzGMhhamBWbNfOVmPJaa0BLANRgo9I1EFMG1Sz/oMqDSmQby8vfuVw6O4WA==", "commit"=>"Delete Preferences", "id"=>"23"}
+  [1m[36mAttsTable Load (1.8ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 34ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:32:37 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.3ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 54ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:32:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (19.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (181.4ms)
+Started GET "/users" for ::1 at 2019-11-05 13:32:39 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:32:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (20.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (163.9ms)
+Started GET "/atts_tables/23" for ::1 at 2019-11-05 13:32:42 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAttsTable Load (0.3ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 34ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:32:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (25.7ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (176.7ms)
+Started DELETE "/atts_tables/23" for ::1 at 2019-11-05 13:36:33 -0500
+Processing by AttsTablesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OsBongjUaBkZhmwISky10sAst92ilNZPHiAz1sRUnzvpIJgugXpdjvhD/BMQOXoCqQYGzKb+9NInNEkatKgeOg==", "commit"=>"Delete Preferences", "id"=>"23"}
+  [1m[36mAttsTable Load (1.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.3ms)[0m  [1m[31mDELETE FROM "atts_tables" WHERE "atts_tables"."id" = ?[0m  [["id", 23]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 92ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:36:33 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find AttsTable with 'id'=23):
+  
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2925998685707246013_70332699003500'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.5ms)
+Started GET "/users" for ::1 at 2019-11-05 13:37:32 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find AttsTable with 'id'=23):
+  
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2925998685707246013_70332758325760'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.3ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.1ms)
+Started GET "/atts_tables/23" for ::1 at 2019-11-05 13:37:35 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find AttsTable with 'id'=23):
+  
+app/controllers/atts_tables_controller.rb:17:in `show'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.3ms)
+Started GET "/users" for ::1 at 2019-11-05 13:37:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find AttsTable with 'id'=23):
+  
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb___2925998685707246013_70332747685700'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-11-05 13:39:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 256ms (Views: 243.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:39:08 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (25.8ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.7ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.8ms)
+Started GET "/login" for ::1 at 2019-11-05 13:39:10 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:39:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (13.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (160.7ms)
+Started GET "/auth/facebook" for ::1 at 2019-11-05 13:39:11 -0500
+Started GET "/auth/facebook/callback?code=AQB5EXctl23hnLV4TnyfJwsa9kPnSs03qDyhrUC-7SDR1GkMCT9YxxZCOob_Ct0x9Aj5F_1CLe_ouO8joDIM8a76VdDToIbyWH9yXhO5fjsAro10gVbRGChvlaJL9pGBGwgKsEZyN36VUFb3msseOqOBxypkA_wdZpJKl3OMKZBeQYZqNr8UmW1jH9GTU8W-_Vtlbn9euHBGljUiyxNdzw--tSVHmePZZpqBfJG29esR2sHDMch1us8__g4DtjvPHe3QCkTyHftJOyj5XYuukzjxcYtLE5b7Hdo2kQPftS-7j52lMLjMYbQbZUG-i7bnDyM&state=51aee3253904e2907a44988e1777f99fd4e25204a3f0b4d5" for ::1 at 2019-11-05 13:39:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB5EXctl23hnLV4TnyfJwsa9kPnSs03qDyhrUC-7SDR1GkMCT9YxxZCOob_Ct0x9Aj5F_1CLe_ouO8joDIM8a76VdDToIbyWH9yXhO5fjsAro10gVbRGChvlaJL9pGBGwgKsEZyN36VUFb3msseOqOBxypkA_wdZpJKl3OMKZBeQYZqNr8UmW1jH9GTU8W-_Vtlbn9euHBGljUiyxNdzw--tSVHmePZZpqBfJG29esR2sHDMch1us8__g4DtjvPHe3QCkTyHftJOyj5XYuukzjxcYtLE5b7Hdo2kQPftS-7j52lMLjMYbQbZUG-i7bnDyM", "state"=>"51aee3253904e2907a44988e1777f99fd4e25204a3f0b4d5", "provider"=>"facebook"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 39ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for ::1 at 2019-11-05 13:39:12 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (23.6ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find AttsTable with 'id'=23):
+  
+app/views/users/index.html.erb:4:in `_app_views_users_index_html_erb__1200351535211368038_70198305989760'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND ("users"."id" != ?) LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "atts_table_id" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2019-11-05 18:40:03.310396"], ["atts_table_id", nil], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/user" for ::1 at 2019-11-05 13:40:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (13.0ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.4ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (196.3ms)
+Started GET "/users" for ::1 at 2019-11-05 13:40:36 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 295ms (Views: 247.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:40:37 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (13.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (163.3ms)
+Started GET "/users/1/atts_tables/new" for ::1 at 2019-11-05 13:40:39 -0500
+Processing by AttsTablesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering atts_tables/new.html.erb within layouts/application
+  Rendered atts_tables/new.html.erb within layouts/application (102.5ms)
+Completed 200 OK in 137ms (Views: 116.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-05 13:40:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [42 times] (12.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (148.9ms)

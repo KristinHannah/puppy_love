@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     def edit 
         @user = User.find(params[:id])
-        @user.atts_table_atts.build
+        @user.atts_table.build
     end
 
     def update 
