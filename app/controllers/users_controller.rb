@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
     def edit 
         @user = User.find(params[:id])
-        @user.atts_table.build
+        @user.build_atts_table
     end
 
     def update 
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:email, :password_digest, :password_confirmation, :name, :city, atts_table_atts: [
+        params.require(:user).permit(:email, :password_digest, :password_confirmation, :name, :city, atts_table_attributes: [
             :apartment_friendly,
             :pet_friendly,
             :hypoallergenic,

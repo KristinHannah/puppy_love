@@ -7,9 +7,6 @@ class AttsTablesController < ApplicationController
 
     def create 
         @atts_table = AttsTable.create(atts_table_params)
-        user = User.find(@atts_table.user_id)
-        user.assign_atts(@atts_table)
-        user.save 
         redirect_to atts_table_path(@atts_table)
     end 
 
@@ -35,7 +32,7 @@ class AttsTablesController < ApplicationController
     end 
 
     def atts_table_params 
-        params.require(:atts_table).permit(:id, :apartment_friendly, :hypoallergenic, :pet_friendly, :noise, :user_id)
+        params.require(:atts_table).permit(:id, :apartment_friendly, :hypoallergenic, :pet_friendly, :noise, :cold_weather, :size, :user_id)
     end 
 end
 
