@@ -1,4 +1,4 @@
-<%= form_for @user, :url => edit_user_path do |f| %>
+<%= form_for @user, :url => edit_user_path(@user.id) do |f| %>
     <p> Name: </p> <%= f.text_field :name %> <br>
     <p> City: </p> <%= f.text_field :city %> <br>
     <%= fields_for :atts_table_attributes do |atts|%>
