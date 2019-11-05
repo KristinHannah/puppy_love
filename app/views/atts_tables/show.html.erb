@@ -12,4 +12,6 @@
 <% end %>
 
 <p> <%= link_to "Edit Your Preferences Here", edit_atts_table_path(@atts_table) %></p>
-<p> <%= link_to "Delete Your Preferences", atts_table_path(@atts_table), :method => :delete %> </p>
+<%= form_tag atts_table_path(@atts_table.id), method: "delete" do %>
+  <%= submit_tag "Delete Preferences" %>
+<% end %>
