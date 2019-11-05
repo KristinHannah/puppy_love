@@ -11645,3 +11645,9 @@ rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
   Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (205.9ms)
+  [1m[36mDogBreed Load (0.6ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."name" = ? LIMIT ?[0m  [["name", "Poodle"], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ?[0m  [["apartment_friendly", "t"]]
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT dog_breed_ids.* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ?[0m  [["apartment_friendly", "t"]]
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ?[0m  [["apartment_friendly", "t"]]
+  [1m[36mAttsTable Load (2.7ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ? AND "atts_tables"."pet_friendly" = ?[0m  [["apartment_friendly", "t"], ["pet_friendly", "t"]]
