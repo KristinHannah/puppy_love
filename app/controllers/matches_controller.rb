@@ -37,8 +37,8 @@ class MatchesController < ApplicationController
     end 
 
     def destroy 
-        @match = Match.find(params[:id])
-        @match.delete 
+        @match = Match.find(params[:id]).destroy
+        redirect_to users_path
     end 
 
 

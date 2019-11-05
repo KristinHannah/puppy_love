@@ -16,4 +16,6 @@
 <%= f.submit "Add Comment" %>
 <% end %>
 
-<%= link_to "Delete Your Match", match_path(@match), :method => :delete %>
+<%= form_tag match_path(@match.id), method: "delete" do %>
+  <%= submit_tag "Delete Match" %>
+<% end %>

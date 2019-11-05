@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   resources :matches
   resources :atts_tables
   resources :dog_breeds
-  resources :users, only: [:index]
+  resources :users, only: [:index, :new]
   resources :users, only: [:show] do 
-    resources :matches, only: [:show, :index]
+    resources :matches, only: [:show, :index, :destroy]
   end 
   get '/login' => 'sessions#new'
   get '/signup' => 'users#new'
