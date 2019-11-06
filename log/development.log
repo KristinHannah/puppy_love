@@ -14837,3 +14837,219 @@ rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
   [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."pet_friendly" = ? AND "atts_tables"."size" = ?[0m  [["apartment_friendly", "t"], ["pet_friendly", "f"], ["size", "small"]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL)[0m
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ? AND "atts_tables"."hypoallergenic" = ? AND "atts_tables"."noise" = ?[0m  [["apartment_friendly", "t"], ["hypoallergenic", "t"], ["noise", "f"]]
+  [1m[36mAttsTable Load (0.3ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ? AND "atts_tables"."hypoallergenic" = ? AND "atts_tables"."noise" = ?[0m  [["apartment_friendly", "t"], ["hypoallergenic", "t"], ["noise", "f"]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."apartment_friendly" = ? AND "atts_tables"."hypoallergenic" = ? AND "atts_tables"."noise" = ? AND "atts_tables"."cold_weather" = ?[0m  [["apartment_friendly", "t"], ["hypoallergenic", "t"], ["noise", "f"], ["cold_weather", "t"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ?[0m  [["apartment_friendly", "t"]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."cold_weather" = ?[0m  [["cold_weather", "t"]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."cold_weather" = ? AND "atts_tables"."size" = ?[0m  [["cold_weather", "t"], ["size", "small"]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.4ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."hypoallergenic" = ?[0m  [["apartment_friendly", "t"], ["hypoallergenic", "t"]]
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."size" = ?[0m  [["apartment_friendly", "t"], ["size", "small"]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."hypoallergenic" = ?[0m  [["hypoallergenic", "t"]]
+Started GET "/atts_tables/26" for ::1 at 2019-11-06 17:39:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mAttsTable Load (0.7ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 348ms (Views: 299.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-06 17:39:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [48 times] (29.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.5ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (203.0ms)
+Started DELETE "/atts_tables/26" for ::1 at 2019-11-06 17:39:48 -0500
+Processing by AttsTablesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J7Lvfmsq9tKEXVzBtNsrOHOzXaub3k2ZvhrzOxsVl5X0Uh/O4oTDRWWYzNruruToGpnsup+0bwSHDon3a+kWlA==", "commit"=>"Delete Preferences", "id"=>"26"}
+  [1m[36mAttsTable Load (0.1ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "atts_tables" WHERE "atts_tables"."id" = ?[0m  [["id", 26]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users" for ::1 at 2019-11-06 17:39:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 56ms (Views: 31.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-06 17:39:48 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [48 times] (15.4ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (167.2ms)
+Started GET "/users/1/atts_tables/new" for ::1 at 2019-11-06 17:39:49 -0500
+Processing by AttsTablesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendering atts_tables/new.html.erb within layouts/application
+  Rendered atts_tables/new.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 126ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-06 17:39:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [48 times] (16.2ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (162.6ms)
+Started POST "/atts_tables" for ::1 at 2019-11-06 17:40:03 -0500
+Processing by AttsTablesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6haFjZ87wiK+xWcg7ZUvX60jhhZJXhQ1MjMBpatJiM859nU9FpX3tV8A9zu34OCPxAk3B000NqgLJ3tp27UJzg==", "atts_table"=>{"user_id"=>"1", "apartment_friendly"=>"true", "hypoallergenic"=>"false", "pet_friendly"=>"true", "noise"=>"false", "cold_weather"=>"false", "size"=>"small"}, "commit"=>"Create Atts table"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "atts_tables" ("user_id", "apartment_friendly", "hypoallergenic", "pet_friendly", "noise", "created_at", "updated_at", "cold_weather", "size") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["apartment_friendly", "t"], ["hypoallergenic", "f"], ["pet_friendly", "t"], ["noise", "f"], ["created_at", "2019-11-06 22:40:03.431392"], ["updated_at", "2019-11-06 22:40:03.431392"], ["cold_weather", "f"], ["size", "small"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/atts_tables/27
+Completed 302 Found in 10ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/atts_tables/27" for ::1 at 2019-11-06 17:40:03 -0500
+Processing by AttsTablesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mAttsTable Load (0.2ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering atts_tables/show.html.erb within layouts/application
+  Rendered atts_tables/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-06 17:40:03 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered collection of /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [48 times] (16.0ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/kristinkraemer/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.7.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (173.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."size" = ?[0m  [["apartment_friendly", "t"], ["size", "small"]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."size" = ? AND "atts_tables"."pet_friendly" = ?[0m  [["apartment_friendly", "t"], ["size", "small"], ["pet_friendly", "t"]]
+  [1m[36mAttsTable Load (0.5ms)[0m  [1m[34mSELECT "atts_tables".* FROM "atts_tables" WHERE ("atts_tables"."dog_breed_id" IS NOT NULL) AND "atts_tables"."apartment_friendly" = ? AND "atts_tables"."size" = ? AND "atts_tables"."pet_friendly" = ? AND "atts_tables"."noise" = ?[0m  [["apartment_friendly", "t"], ["size", "small"], ["pet_friendly", "t"], ["noise", "f"]]

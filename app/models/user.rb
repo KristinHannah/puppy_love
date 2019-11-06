@@ -20,16 +20,8 @@ class User < ApplicationRecord
 
     def matcher
      user_atts = self.atts_table
-
-     user_app = user_atts.apartment_friendly
-     user_hypo = user_atts.hypoallergenic
-     user_pet = user_atts.pet_friendly
-     user_noise = user_atts.noise
-     user_cold = user_atts.cold_weather 
-     user_size = user_atts.size 
-     
      matches = []
-     match_1 = AttsTable.where(apartment_friendly: user_app, hypoallergenic: user_hypo, pet_friendly: user_pet, noise: user_noise).where.not(dog_breed_id: nil)
+     match_1 = AttsTable.dog.apartment_friendly(user_atts.apartment_friendly).by_size(user_atts.size).pet_friendly(user_atts.pet_friendly).hypoallergenic(user_atts.hypoallergenic).no_noise(user_atts.noise).cold(user_atts.cold_weather)
         match_1.each do |m|
         matches << m.dog_breed_id
      end
@@ -39,7 +31,7 @@ class User < ApplicationRecord
     def matcher_new 
         @user_atts = self.atts_table
         matches = []
-        match_1 = AttsTable.dog.apartment_friendly(@user_atts.apartment_friendly).pet_friendly(@user_atts.pet_friendly).size(@user_atts.size)
+        match_1 = AttsTable.dog.apartment_friendly(@user_atts.apartment_friendly).pet_friendly(@user_atts.pet_friendly).by_size(@user_atts.size)
             if @user_atts.hypoallergenic == true 
                 match_1 = match_1.hypoallergenic
             end         
@@ -49,6 +41,9 @@ class User < ApplicationRecord
             if @user_atts.cold_weather == true 
                 match_1 = match_1.cold 
             end 
+            match_1.each do |m|
+                matches << m.dog_breed_id
+             end
             matches 
     end 
 
