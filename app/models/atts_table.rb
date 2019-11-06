@@ -8,6 +8,7 @@ class AttsTable < ApplicationRecord
     scope :hypoallergenic, -> { where(hypoallergenic: true)  }
     scope :no_noise, -> { where(noise: false)}
     scope :cold, -> { where(cold_weather: true)}
-    scope :size, -> (select_size) { where(:size => select_size)}
+    scope :by_size, -> (answer) { where(:size => answer)}
 end
+
 

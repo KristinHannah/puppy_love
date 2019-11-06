@@ -14,16 +14,20 @@ class User < ApplicationRecord
         end 
     end 
 
-    def assign_atts(atts_table)
-        self.atts_table_id = atts_table.id
-    end 
+   # def assign_atts(atts_table)
+   #     self.atts_table_id = atts_table.id
+   # end 
 
     def matcher
      user_atts = self.atts_table
+
      user_app = user_atts.apartment_friendly
      user_hypo = user_atts.hypoallergenic
      user_pet = user_atts.pet_friendly
      user_noise = user_atts.noise
+     user_cold = user_atts.cold_weather 
+     user_size = user_atts.size 
+     
      matches = []
      match_1 = AttsTable.where(apartment_friendly: user_app, hypoallergenic: user_hypo, pet_friendly: user_pet, noise: user_noise).where.not(dog_breed_id: nil)
         match_1.each do |m|
@@ -31,6 +35,22 @@ class User < ApplicationRecord
      end
     matches
     end
+
+    def matcher_new 
+        @user_atts = self.atts_table
+        matches = []
+        match_1 = AttsTable.dog.apartment_friendly(@user_atts.apartment_friendly).pet_friendly(@user_atts.pet_friendly).size(@user_atts.size)
+            if @user_atts.hypoallergenic == true 
+                match_1 = match_1.hypoallergenic
+            end         
+            if @user_atts.noise == false 
+                match_1 = match_1.no_noise
+            end 
+            if @user_atts.cold_weather == true 
+                match_1 = match_1.cold 
+            end 
+            matches 
+    end 
 
     def match_accesser 
        find_user_matches = Match.select {|u| u.user_id == self.id}
