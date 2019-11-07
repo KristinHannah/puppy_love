@@ -2,12 +2,12 @@ class AttsTable < ApplicationRecord
     belongs_to :dog_breed
     belongs_to :user 
 
-    validates :apartment_friendly, presence: true
-    validates :pet_friendly, presence: true
-    validates :size, presence: true
-    validates :hypoallergenic, presence: true
-    validates :noise, presence: true
-    validates :cold_weather, presence: true
+    validates :apartment_friendly, inclusion: [true, false]
+    validates :pet_friendly, inclusion: [true, false]
+    validates :size, inclusion: ['small', 'medium', 'large']
+    validates :hypoallergenic, inclusion: [true, false]
+    validates :noise, inclusion: [true, false]
+    validates :cold_weather, inclusion: [true, false]
 
     scope :dog, -> { where.not(dog_breed_id: nil ) }
     scope :apartment_friendly, -> (answer) { where(:apartment_friendly => answer)}
