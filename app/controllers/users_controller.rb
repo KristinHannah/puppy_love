@@ -4,14 +4,6 @@ class UsersController < ApplicationController
         @user = User.new 
     end 
 
-    @post = Post.new(post_params)
- 
-    if @post.save
-      redirect post_path(@post)
-    else
-      render :new
-    end
-
     def create 
         @user = User.new(user_params)
         if params[:user][:password] === params[:user][:password_confirmation]
