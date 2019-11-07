@@ -1,3 +1,18 @@
+<% if @atts_table.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@atts_table.errors.count, "error") %>
+      prohibited your preferences from being submitted:
+    </h2>
+ 
+    <ul>
+    <% @atts_table.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @atts_table, :url => atts_tables_path do |f| %>
 <%= f.hidden_field :user_id %>
 <p> Do you live in an apartment? </p> 
