@@ -4,12 +4,23 @@ class UsersController < ApplicationController
         @user = User.new 
     end 
 
+    @post = Post.new(post_params)
+ 
+    if @post.save
+      redirect post_path(@post)
+    else
+      render :new
+    end
+
     def create 
-        @user = User.new 
+        @user = User.new(user_params)
         if params[:user][:password] === params[:user][:password_confirmation]
-            @user = User.create(user_params)
+            if @user.save
             session[:user_id] = @user.id
             redirect_to users_path 
+            else 
+            render :new 
+            end 
         else 
             render :new 
         end 
@@ -34,14 +45,7 @@ class UsersController < ApplicationController
     private 
 
     def user_params
-        params.require(:user).permit(:email, :password_digest, :password_confirmation, :name, :city, atts_table_attributes: [
-            :apartment_friendly,
-            :pet_friendly,
-            :hypoallergenic,
-            :noise,
-            :cold_weather,
-            :size
-          ])
+        params.require(:user).permit(:email, :password_digest, :password_confirmation)
     end 
 end
 

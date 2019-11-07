@@ -6,8 +6,12 @@ class AttsTablesController < ApplicationController
     end 
 
     def create 
-        @atts_table = AttsTable.create(atts_table_params)
-        redirect_to atts_table_path(@atts_table)
+        @atts_table = AttsTable.new(atts_table_params)
+        if @atts_table.save 
+            redirect_to atts_table_path(@atts_table)
+        else 
+            render :new 
+        end 
     end 
 
     def show 

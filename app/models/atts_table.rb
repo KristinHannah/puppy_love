@@ -46,12 +46,6 @@ class AttsTable < ApplicationRecord
         end 
     end 
 
-   # scope :pet_friendly, -> { where(:pet_friendly: true) }
-   # scope :hypoallergenic, -> { where(hypoallergenic: true)  }
-   # scope :no_noise, -> { where(noise: false)}
-   # scope :cold, -> { where(cold_weather: true)}
-
-
 end
 
 
