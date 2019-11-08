@@ -1,3 +1,8 @@
+<%= form_tag(dog_breeds_path, method: :get) do %>
+  Dog Breed <%= text_field_tag :name, params[:name] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
 
 <% @dogs.each do |dog| %>
 <p> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </p> <br>
