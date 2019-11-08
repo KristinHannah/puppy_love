@@ -1,13 +1,15 @@
 <h1> Your Preferences </h1>
 
-
+<div class="info">
 <p> Do you live in an apartment? </p> <%= @atts_table.apartment_friendly %>
 <p> Do you or one of the members of your household have allergies to pets? </p> <%= @atts_table.hypoallergenic %>
 <p> Do you have any other pets in your home? </p> <%= @atts_table.pet_friendly %>
 <p> Could you live with a dog that barks or howls? </p> <%= @atts_table.noise %>
 <p> Do you live in a cold climate? </p> <%= @atts_table.cold_weather %>
 <p> What size dog do you prefernce? </p> <%= @atts_table.size%>
+</div>
 
+<div class="links">
 <%= form_tag('/matches') do %>
 <%= hidden_field_tag('user_id', @atts_table.user_id)%>
 <input type="submit" value="Create Match">
@@ -18,4 +20,4 @@
 <%= form_tag atts_table_path(@atts_table.id), method: "delete" do %>
   <%= submit_tag "Delete Preferences" %>
 <% end %>
-
+</div>

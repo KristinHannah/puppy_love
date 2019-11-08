@@ -1,6 +1,7 @@
 <% @dog_breed = DogBreed.find(@match.dog_breed_id) %>
 <h1> You and <%= @dog_breed.name %> </h1>
 
+<div class="info">
 <p> Origins: <%= @dog_breed.origins %> </p>
 <p> Life Span: <%= @dog_breed.life_span %> </p>
 <p> Group: <%= @dog_breed.group %> </p>
@@ -10,12 +11,17 @@
 <p> Is this dog hypoallergenic? <%= @dog_atts.hypoallergenic %> </p>
 <p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
 <p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
+</div>
 
+<div class= "form">
 <%= form_for(@match) do |f| %>
 <p> What do you think of this match? </p> <%= f.text_area :comment_field %>
 <%= f.submit "Add Comment" %>
 <% end %>
+</div>
 
+<div class= "form">
 <%= form_tag match_path(@match.id), method: "delete" do %>
   <%= submit_tag "Delete Match" %>
 <% end %>
+</div>
