@@ -109,3 +109,14 @@ dog_1 = DogBreed.create(name: 'Siberian Husky', origins: 'Siberian nomad tribe, 
 atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: false, hypoallergenic: false, pet_friendly: true, noise: true, cold_weather: true, size: 'medium')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
+
+dog_1 = DogBreed.create(name: 'Corgi', origins: 'Wales', life_span: '12-14 years', group: 'herding')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: false, noise: false, cold_weather: true, size: 'small')
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
+
+
+dog_1 = DogBreed.create(name: 'Bulldog', origins: 'England', life_span: '8-12 years', group: 'companion')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: false, noise: true, cold_weather: false, size: 'medium')
+dog_1.atts_table_id = atts_1.id 
+dog_1.save
