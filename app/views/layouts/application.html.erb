@@ -9,17 +9,19 @@
 </head>
 <body>
 
-<img src='/images/Puppy_Love_header.jpg' alt="header with puppies" id="head_image">
+<img src='/images/Puppy_Love_header2.jpg' alt="header with puppies" id="head_image">
 
 <nav>
-<%= link_to "login", login_path%>
-<%= link_to "All Dog Breeds", dog_breeds_path %>
-<%= link_to "User Home", users_path %>
-</nav>
-
+<button class="button">  <%= link_to "login", login_path%> </button>
+<button class="button">  <%= link_to "All Dog Breeds", dog_breeds_path %> </button>
+<button class="button">  <%= link_to "User Home", users_path %> </button>
+<button class="button"> 
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <% end %>
+</button>
+</nav>
+
 
 <%= yield %>
 

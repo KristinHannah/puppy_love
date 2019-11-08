@@ -5,16 +5,19 @@
 }
 
 h1 {
+    text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h2{
+    text-align: center;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 p{
+    text-align: left;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -24,7 +27,14 @@ body{
 }
 
 div .info{
-
+    padding: 20px;
+    padding-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    position: absolute;
+    margin-top: 43%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 div .search{
@@ -36,5 +46,50 @@ div .form{
 }
 
 div .links{
-    
+
 }
+
+.button{
+    border-radius: 15px;
+    background-color: white; 
+    border: none;
+    color: turquoise;
+    padding: 17px 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: lightblue;  
+    color: darkslategray ;
+  }
+
+  input[type=submit] {
+    border-radius: 15px;
+    background-color: white; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: none;
+    color: turquoise;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+  }
+
+
+  input[type="submit"]:hover {
+    background-color:lightblue ;
+    color: darkslategray ;
+  }
+  
