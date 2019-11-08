@@ -111,7 +111,7 @@ dog_1.atts_table_id = atts_1.id
 dog_1.save
 
 dog_1 = DogBreed.create(name: 'Corgi', origins: 'Wales', life_span: '12-14 years', group: 'herding')
-atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: false, noise: false, cold_weather: true, size: 'small')
+atts_1 = AttsTable.create(dog_breed_id: dog_1.id, apartment_friendly: true, hypoallergenic: false, pet_friendly: false, noise: false, cold_weather: true, size: 'medium')
 dog_1.atts_table_id = atts_1.id 
 dog_1.save
 

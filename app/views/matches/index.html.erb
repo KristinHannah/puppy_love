@@ -1,11 +1,14 @@
 
-<div class="info">
+
+<ul>
 <% @matches.each do |match| %>
+<li>
 <% dog = DogBreed.find(match.dog_breed_id) %>
 <h1> <%= dog.name %> </h1>
 <p> Origins: <%= dog.origins %> </p>
 <p> Life Span: <%= dog.life_span %> </p>
 <p> Group: <%= dog.group %> </p>
 <%= link_to "See Your Match", match_path(match.id) %>
+</li>
 <% end %>
-</div>
+</ul>

@@ -5,9 +5,11 @@
 <% end %>
 </div>
 
-<div class="info">
-<% @dogs.each do |dog| %>
-<p> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </p> <br>
 
+<ul>
+<% @dogs.each do |dog| %>
+<li>
+<p> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </p> <br>
+</li>
 <% end %>
-</div>
+</ul>
