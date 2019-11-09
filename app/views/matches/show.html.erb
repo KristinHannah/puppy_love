@@ -1,6 +1,8 @@
 <% @dog_breed = DogBreed.find(@match.dog_breed_id) %>
 <h1> You and <%= @dog_breed.name %> </h1>
 
+<%= image_tag("#{@dog_breed.image}", class: "dog_image", alt: "Image of Dog") %> 
+
 <div class="info">
 <p> Origins: <%= @dog_breed.origins %> </p>
 <p> Life Span: <%= @dog_breed.life_span %> </p>

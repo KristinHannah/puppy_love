@@ -1,5 +1,5 @@
 <h1> <%= @dog.name %> </h1>
-
+<%= image_tag("#{@dog.image}", class: "dog_image", alt: "Image of Dog") %> 
 <p> Origins: <%= @dog.origins %> </p>
 <p> Life Span: <%= @dog.life_span %> </p>
 <p> Group: <%= @dog.group %> </p>
