@@ -37,6 +37,12 @@ div .info{
     margin-right: 15%;
 }
 
+img.dog_image{
+    max-height: 350px;
+    max-width: 350px;
+    border-radius: 15px;
+}
+
 div .search{
 
 }

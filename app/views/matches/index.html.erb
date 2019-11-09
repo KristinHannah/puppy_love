@@ -4,8 +4,8 @@
 <% @matches.each do |match| %>
 <li>
 <% dog = DogBreed.find(match.dog_breed_id) %>
-<%= image_tag("#{@dog.image}", class: "dog_image", alt: "Image of Dog") %> 
 <h1> <%= dog.name %> </h1>
+<%= image_tag("#{dog.image}", class: "dog_image", alt: "Image of Dog") %> 
 <p> Origins: <%= dog.origins %> </p>
 <p> Life Span: <%= dog.life_span %> </p>
 <p> Group: <%= dog.group %> </p>

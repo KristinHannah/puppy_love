@@ -5,6 +5,7 @@ class User < ApplicationRecord
     accepts_nested_attributes_for :atts_table
 
     has_secure_password 
+    
     validates :email, :presence => true 
     validates :email, :uniqueness => true 
 
