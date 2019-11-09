@@ -14,7 +14,7 @@
 <% end %>
 
 <h1>Sign Up</h1>
-<div class= "form">
+
 <%= form_for(@user) do |f| %>
     <%= f.label :email %>
     <%= f.text_field :email %> 
@@ -27,4 +27,3 @@
 
 <button class="button"> <%= f.submit %> </button>
 <% end %>
-</div>

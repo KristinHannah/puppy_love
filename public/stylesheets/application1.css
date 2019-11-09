@@ -19,6 +19,7 @@ h2{
 p{
     text-align: left;
     color: white;
+    font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -47,15 +48,6 @@ img.dog_image{
 
 div.search{
   float: right;
-
-}
-
-div .form{
-
-}
-
-div .links{
-
 }
 
 div.dog_breed_class h1{
@@ -81,8 +73,6 @@ ul li {
   padding: 20px;
   color: #ffffff;
 }
-
-
 
 .button{
     border-radius: 15px;

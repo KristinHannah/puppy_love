@@ -13,15 +13,14 @@
 <p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
 </div>
 
-<div class= "form">
+
 <%= form_for(@match) do |f| %>
 <p> What do you think of this match? </p> <%= f.text_area :comment_field %>
 <button class="button"> <%= f.submit "Add Comment" %> </button>
 <% end %>
-</div>
 
-<div class= "form">
+
+
 <%= form_tag match_path(@match.id), method: "delete" do %>
- <button class="button"> <%= submit_tag "Delete Match" %> </button>
+ <button class="button"> <%= submit_tag "Unmatch" %> </button>
 <% end %>
-</div>
