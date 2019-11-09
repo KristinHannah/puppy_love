@@ -6,10 +6,12 @@
 <% dog = DogBreed.find(match.dog_breed_id) %>
 <h1> <%= dog.name %> </h1>
 <%= image_tag("#{dog.image}", class: "dog_image", alt: "Image of Dog") %> 
+<div class="dog_info">
 <p> Origins: <%= dog.origins %> </p>
 <p> Life Span: <%= dog.life_span %> </p>
 <p> Group: <%= dog.group %> </p>
 <%= link_to "See Your Match", match_path(match.id) %>
+</div>
 </li>
 <% end %>
 </ul>

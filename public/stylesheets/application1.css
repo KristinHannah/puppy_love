@@ -38,9 +38,11 @@ div .info{
 }
 
 img.dog_image{
-    max-height: 350px;
-    max-width: 350px;
+    max-height: 300px;
+    max-width: 300px;
     border-radius: 15px;
+    position: relative;
+    padding-left: 200px;
 }
 
 div .search{
@@ -54,6 +56,32 @@ div .form{
 div .links{
 
 }
+
+div.dog_breed_class h1{
+  text-align: center;
+}
+
+div.dog_breed_class img.dog_image{
+  border-radius: 15px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+div.dog_info{
+  padding: 20px;
+  float: left;
+}
+
+ul li {
+  font-size: medium;
+  border: 5px solid white;
+  margin-top: 60px;
+  list-style-type: none; 
+  padding: 20px;
+  color: #ffffff;
+}
+
+
 
 .button{
     border-radius: 15px;

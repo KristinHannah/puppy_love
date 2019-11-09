@@ -1,6 +1,6 @@
 <div class= "search">
 <%= form_tag(dog_breeds_path, method: :get) do %>
-  Dog Breed <%= text_field_tag :name, params[:name] %>
+ <p> Dog Breed </p> <%= text_field_tag :name, params[:name] %>
   <%= submit_tag 'Search', name: nil %>
 <% end %>
 </div>
@@ -9,8 +9,12 @@
 <ul>
 <% @dogs.each do |dog| %>
 <li>
-<p> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </p> <br>
+
+<div class="dog_breed_class">
+<h1> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </h1> <br>
 <%= image_tag("#{dog.image}", class: "dog_image", alt: "Image of Dog") %>
+</div>
+
 </li>
 <% end %>
 </ul>
