@@ -12,12 +12,14 @@
 <div class="links">
 <%= form_tag('/matches') do %>
 <%= hidden_field_tag('user_id', @atts_table.user_id)%>
+<button class="button">
 <input type="submit" value="Create Match">
+</button>
 <% end %>
 
-<p> <%= link_to "Edit Your Preferences Here", edit_atts_table_path(@atts_table) %></p>
+<button class="button"> <%= link_to "Edit Your Preferences Here", edit_atts_table_path(@atts_table) %></button>
 
 <%= form_tag atts_table_path(@atts_table.id), method: "delete" do %>
-  <%= submit_tag "Delete Preferences" %>
+ <button class="button"> <%= submit_tag "Delete Preferences" %> </button>
 <% end %>
 </div>
