@@ -16,12 +16,12 @@
 <div class= "form">
 <%= form_for(@match) do |f| %>
 <p> What do you think of this match? </p> <%= f.text_area :comment_field %>
-<%= f.submit "Add Comment" %>
+<button class="button"> <%= f.submit "Add Comment" %> </button>
 <% end %>
 </div>
 
 <div class= "form">
 <%= form_tag match_path(@match.id), method: "delete" do %>
-  <%= submit_tag "Delete Match" %>
+ <button class="button"> <%= submit_tag "Delete Match" %> </button>
 <% end %>
 </div>

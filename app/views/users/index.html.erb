@@ -2,14 +2,16 @@
 
 <% if @user.atts_table != nil %>
     <% @atts_table = @user.atts_table %>
-    <%= link_to "Your Preferences", atts_table_path(@atts_table)%>
+  <button class="button">  <%= link_to "Your Preferences", atts_table_path(@atts_table)%> </button>
 <% else %>
-    <%= link_to "Enter Some Information about yourself to start getting matches", new_user_atts_table_path(@user.id) %>
+   <button class="button"> <%= link_to "Enter Some Information about yourself to start getting matches", new_user_atts_table_path(@user.id) %> </button>
 <% end %>
 
 <br>
 
 <h2> Your Matches </h2>
+<button class="button">
 <%= link_to "Your Matches", user_matches_path(@user.id) %>
+</button>
 
 

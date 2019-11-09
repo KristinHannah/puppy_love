@@ -13,6 +13,7 @@
 <% if @match.comment_field != nil %>
     <p> Your Comments: <%= @match.comment_field %> </p>
 <% end %>
-
+<button class="button">
 <%= link_to "Edit Your Match", edit_match_path(@match) %>
+</button>
 </div>
