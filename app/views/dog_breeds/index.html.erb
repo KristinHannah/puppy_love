@@ -10,6 +10,7 @@
 <% @dogs.each do |dog| %>
 <li>
 <p> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </p> <br>
+<%= image_tag("#{dog.image}", class: "dog_image", alt: "Image of Dog") %>
 </li>
 <% end %>
 </ul>

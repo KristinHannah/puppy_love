@@ -9,7 +9,7 @@ class DogBreedsController < ApplicationController
     end 
 
     def show 
-        @dog = DogBreed.find(params[:id])
+        @dog_breed = DogBreed.find(params[:id])
     end 
 
     private

@@ -8,11 +8,7 @@
 <p> Life Span: <%= @dog_breed.life_span %> </p>
 <p> Group: <%= @dog_breed.group %> </p>
 
-<% @dog_atts = @dog_breed.atts_table %>
-<p> Is this dog apartment friendly? <%= @dog_atts.apartment_friendly %> </p>
-<p> Is this dog hypoallergenic? <%= @dog_atts.hypoallergenic %> </p>
-<p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
-<p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
+<%= render 'dog_breeds/dog_info' %>
 
 <% if @match.comment_field != nil %>
     <p> Your Comments: <%= @match.comment_field %> </p>
