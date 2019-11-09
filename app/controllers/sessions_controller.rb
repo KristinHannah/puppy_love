@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
 
     def create 
         params.permit!
-       # user_info = request.env['omniauth.auth']
         if  auth_hash = request.env['omniauth.auth']
             #logged in via facebook
             user = User.find_or_create_by_omniauth(auth_hash)

@@ -5,7 +5,7 @@ class User < ApplicationRecord
     accepts_nested_attributes_for :atts_table
 
     has_secure_password 
-    
+
     validates :email, :presence => true 
     validates :email, :uniqueness => true 
 
@@ -28,25 +28,6 @@ class User < ApplicationRecord
      end
     matches
     end
-
-    def matcher_new 
-        @user_atts = self.atts_table
-        matches = []
-        match_1 = AttsTable.dog.apartment_friendly(@user_atts.apartment_friendly).pet_friendly(@user_atts.pet_friendly).by_size(@user_atts.size)
-            if @user_atts.hypoallergenic == true 
-                match_1 = match_1.hypoallergenic
-            end         
-            if @user_atts.noise == false 
-                match_1 = match_1.no_noise
-            end 
-            if @user_atts.cold_weather == true 
-                match_1 = match_1.cold 
-            end 
-            match_1.each do |m|
-                matches << m.dog_breed_id
-             end
-            matches 
-    end 
 
     def match_accesser 
        find_user_matches = Match.select {|u| u.user_id == self.id}
