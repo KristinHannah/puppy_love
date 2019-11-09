@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191106225632) do
+ActiveRecord::Schema.define(version: 20191109123158) do
 
   create_table "atts_tables", force: :cascade do |t|
     t.integer  "dog_breed_id"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20191106225632) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.integer  "atts_table_id"
+    t.string   "image"
   end
 
   create_table "matches", force: :cascade do |t|
