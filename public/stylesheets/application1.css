@@ -45,7 +45,8 @@ img.dog_image{
     padding-left: 200px;
 }
 
-div .search{
+div.search{
+  float: right;
 
 }
 
@@ -99,9 +100,18 @@ ul li {
     cursor: pointer;
   }
 
+  .button a{
+    text-decoration: none;
+    color: turquoise;
+  }
+
   .button:hover {
     background-color: lightblue;  
     color: darkslategray ;
+  }
+
+  .button:hover a{
+    color: darkslategray;
   }
 
   input[type=submit] {
@@ -114,7 +124,6 @@ ul li {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
     cursor: pointer;
