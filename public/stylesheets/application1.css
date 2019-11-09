@@ -43,7 +43,7 @@ img.dog_image{
     max-width: 300px;
     border-radius: 15px;
     position: relative;
-    padding-left: 200px;
+    margin-left: 200px;
 }
 
 div.search{
@@ -56,8 +56,15 @@ div.dog_breed_class h1{
 
 div.dog_breed_class img.dog_image{
   border-radius: 15px;
-  padding-left: 200px;
-  padding-right: 200px;
+  margin-left: 300px;
+  margin-right: 200px;
+}
+
+div.dog_breed_class a{
+  text-decoration: none; 
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 div.dog_info{
