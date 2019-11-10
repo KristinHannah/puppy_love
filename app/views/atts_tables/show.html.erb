@@ -7,7 +7,6 @@
 <p> Could you live with a dog that barks or howls? <%= @atts_table.noise %> </p>
 <p> Do you live in a cold climate? <%= @atts_table.cold_weather %> </p>
 <p> What size dog do you prefernce? <%= @atts_table.size %> </p>
-</div>
 
 
 <%= form_tag('/matches') do %>
@@ -21,3 +20,5 @@
 <%= form_tag atts_table_path(@atts_table.id), method: "delete" do %>
  <button class="button"> <%= submit_tag "Delete Preferences" %> </button>
 <% end %>
+
+</div>

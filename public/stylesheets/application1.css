@@ -71,6 +71,13 @@ div.dog_breed_class a{
 
 }
 
+div.dog_breed_class a:hover{
+  text-decoration: none; 
+  color: darkslategray;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+} 
+
 div.dog_info{
   padding: 20px;
   float: left;
