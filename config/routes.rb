@@ -22,8 +22,10 @@ Rails.application.routes.draw do
   get '/auth/facebook', as: 'facebook_login'
   post '/logout' => 'sessions#destroy'
   root 'application#index'
-  
+  get '/entry' => 'application#entry'
 
+  match "/404" => "errors#not_found", :via => :all
+  match "/500" => "errors#internal_server_error", :via => :all
 
     # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     

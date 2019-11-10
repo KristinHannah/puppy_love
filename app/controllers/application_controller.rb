@@ -7,5 +7,9 @@ class ApplicationController < ActionController::Base
 
     end 
 
+    def entry 
+      render :layout => false
+    end 
+
   end
   

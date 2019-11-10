@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Puppy Love</title>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/application1.css" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<nav>
+<button class="button">  <%= link_to "User Home", users_path %> </button>
+<button class="button">  <%= link_to "All Dog Breeds", dog_breeds_path %> </button>
+<button class="button">  <%= link_to "login", login_path%> </button>
+<button class="button"> 
+<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
+  <input type=submit value='logout'>
+<% end %>
+</button>
+</nav>
+
+
+<h1> Oops </h1>
+
+<img src="/images/taken_dog.jpg" class="taken" alt="This dog is already taken">
+
+<h2> Looks like this dog is already taken </h2> <br>
+<h2> Best to go back to looking for a match </h2>
+
+</body>
+</html>

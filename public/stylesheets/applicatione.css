@@ -1,0 +1,25 @@
+body{
+    background-color: turquoise;
+}
+
+img.logo{
+    max-height: 150px;
+    margin-left: 30%;
+    margin-top: 5%;
+
+}
+
+img.doggo{
+    max-height: 400px;
+    margin-left: 35%;
+
+}
+
+p a{
+    color: white;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+}

@@ -23,6 +23,13 @@ p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+img.taken{
+    height: 300px;
+    border-radius: 50px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
 body{
     background-color: turquoise;
 }
@@ -56,8 +63,7 @@ div.dog_breed_class h1{
 
 div.dog_breed_class img.dog_image{
   border-radius: 15px;
-  margin-left: 300px;
-  margin-right: 200px;
+
 }
 
 div.dog_breed_class a{
@@ -70,6 +76,10 @@ div.dog_breed_class a{
 div.dog_info{
   padding: 20px;
   float: left;
+}
+
+div.dog_index{
+  margin-top: 130px;
 }
 
 ul li {
