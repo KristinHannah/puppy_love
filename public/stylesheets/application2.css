@@ -34,14 +34,12 @@ body{
     background-color: turquoise;
 }
 
-div .info{
+div.info{
     padding: 20px;
-    padding-bottom: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #ffffff;
     position: absolute;
-    margin-top: 43%;
-    margin-left: 15%;
+    margin-left: 100px;
     margin-right: 15%;
 }
 
@@ -50,7 +48,7 @@ img.dog_image{
     max-width: 300px;
     border-radius: 15px;
     position: relative;
-    margin-left: 200px;
+    margin-left: 300px;
 }
 
 div.search{

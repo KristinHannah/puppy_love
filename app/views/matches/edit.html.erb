@@ -6,12 +6,7 @@
 <p> Life Span: <%= @dog_breed.life_span %> </p>
 <p> Group: <%= @dog_breed.group %> </p>
 
-<% @dog_atts = @dog_breed.atts_table %>
-<p> Is this dog apartment friendly? <%= @dog_atts.apartment_friendly %> </p>
-<p> Is this dog hypoallergenic? <%= @dog_atts.hypoallergenic %> </p>
-<p> Is this dog friendly to other pets in the house? <%= @dog_atts.pet_friendly %> </p>
-<p> Is this dog likely to bark or howl? <%= @dog_atts.noise %> </p>
-</div>
+<%= render '/dog_breeds/dog_info'%>
 
 
 <%= form_for(@match) do |f| %>
@@ -24,3 +19,5 @@
 <%= form_tag match_path(@match.id), method: "delete" do %>
  <button class="button"> <%= submit_tag "Unmatch" %> </button>
 <% end %>
+
+</div>
