@@ -1,3 +1,4 @@
+<div class="info">
 <h1> <%= @dog_breed.name %> </h1>
 <%= image_tag("#{@dog_breed.image}", class: "dog_image", alt: "Image of Dog") %> 
 <p> Origins: <%= @dog_breed.origins %> </p>
@@ -5,3 +6,4 @@
 <p> Group: <%= @dog_breed.group %> </p>
 
 <%= render 'dog_info' %>
+</div>

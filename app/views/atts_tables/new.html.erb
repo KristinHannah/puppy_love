@@ -13,6 +13,7 @@
   </div>
 <% end %>
 
+<div class="ifno">
 <%= form_for @atts_table, :url => atts_tables_path do |f| %>
 <%= f.hidden_field :user_id %>
 <p> Do you live in an apartment? </p> 
@@ -39,3 +40,4 @@
 </button>
 <% end %>
 
+</div>
