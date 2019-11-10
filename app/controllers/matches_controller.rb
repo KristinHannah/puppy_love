@@ -4,6 +4,7 @@ class MatchesController < ApplicationController
     def index 
         if params[:used_id]
             @matches = User.find(params[:user_id]).matches 
+            @user = User.find(params[:user_id])
         else  
             @matches = Match.all
         end 

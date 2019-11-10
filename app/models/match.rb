@@ -4,7 +4,7 @@ class Match < ApplicationRecord
 
     def self.match_creater(user_id, matches)
         matches.each do | dog_id |
-            Match.create(user_id: user_id, dog_breed_id: dog_id)
+            Match.create(user_id: user_id, dog_breed_id: dog_id) unless Match.find_by(user_id: user_id, dog_breed_id: dog_id)
         end 
     end 
 

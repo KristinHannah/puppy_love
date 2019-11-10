@@ -9,9 +9,14 @@
 
 <br>
 
+<% if @user.matches != [] %>
 <h2> Your Matches </h2>
 <button class="button">
 <%= link_to "Your Matches", user_matches_path(@user.id) %>
 </button>
 
+<% else %>
+<h2> You don't have any matches yet </h2>
+<p> To get matches, fill out your preferences, and then press the create matches button </p>
+<% end %>
 
