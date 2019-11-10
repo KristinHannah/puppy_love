@@ -22,7 +22,7 @@ class User < ApplicationRecord
         match_1.each do |m|
         matches << m.dog_breed_id
      end
-    matches
+    matches.uniq
     end
 
     def match_accesser 
