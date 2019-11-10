@@ -15,10 +15,6 @@ class User < ApplicationRecord
         end 
     end 
 
-   # def assign_atts(atts_table)
-   #     self.atts_table_id = atts_table.id
-   # end 
-
     def matcher
      user_atts = self.atts_table
      matches = []
