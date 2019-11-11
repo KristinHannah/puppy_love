@@ -29,4 +29,4 @@ https://github.com/KristinHannah/puppy_love
 
 #License
 
-The Movie Tracker is licensed under the MIT license, which can be read in the License file located at in the root directory.
+Puppy Love is licensed under the MIT license, which can be read in the License file located at in the root directory.
