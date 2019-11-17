@@ -2,7 +2,7 @@ class MatchesController < ApplicationController
     before_action :require_login
 
     def index 
-        if params[:used_id]
+        if params[:user_id]
             @matches = User.find(params[:user_id]).matches 
             @user = User.find(params[:user_id])
         else  
