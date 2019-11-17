@@ -18,7 +18,7 @@ class User < ApplicationRecord
     def matcher
      user_atts = self.atts_table
      matches = []
-     match_1 = AttsTable.dog.apartment_friendly(user_atts.apartment_friendly).by_size(user_atts.size).pet_friendly(user_atts.pet_friendly).hypoallergenic(user_atts.hypoallergenic).no_noise(user_atts.noise).cold(user_atts.cold_weather)
+        match_1 =  AttsTable.dog.apartment_friendly(user_atts.apartment_friendly).pet_friendly(user_atts.pet_friendly).hypoallergenic(user_atts.hypoallergenic).no_noise(user_atts.noise).cold(user_atts.cold_weather).by_size("#{user_atts.size}")
         match_1.each do |m|
         matches << m.dog_breed_id
      end
