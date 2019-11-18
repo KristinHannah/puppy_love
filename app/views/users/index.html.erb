@@ -24,7 +24,6 @@
 <h2> Breeds you've matched with </h2>
 
 <% @user.dog_breeds.each do |dog| %>
-<li>
 
 <div class="dog_breed_class">
 <h1> <%= link_to "#{dog.name}", dog_breed_path(dog) %> </h1> <br>
