@@ -38492,3 +38492,725 @@ Processing by ErrorsController#not_found as */*
 Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/4/matches" for ::1 at 2019-11-17 09:15:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MatchesController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering matches/index.html.erb within layouts/application
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mDogBreed Load (0.8ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mDogBreed Load (2.0ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mDogBreed Load (0.3ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[36mDogBreed Load (0.2ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendered matches/index.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 513ms (Views: 424.9ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-17 09:15:33 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (5.1ms)
+Completed 200 OK in 40ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-11-17 09:17:30 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (1.4ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.3ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered users/index.html.erb within layouts/application (86.9ms)
+Completed 200 OK in 158ms (Views: 121.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-17 09:17:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (11.0ms)
+Completed 200 OK in 93ms (Views: 91.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.5ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mDogBreed Load (0.8ms)[0m  [1m[34mSELECT "dog_breeds".* FROM "dog_breeds" INNER JOIN "matches" ON "dog_breeds"."id" = "matches"."dog_breed_id" WHERE "matches"."user_id" = ?[0m  [["user_id", 4]]
+Started GET "/entry" for ::1 at 2019-11-18 09:16:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#entry as HTML
+  Rendering application/entry.html.erb
+  Rendered application/entry.html.erb (540.5ms)
+Completed 200 OK in 574ms (Views: 554.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:16:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (41.6ms)
+Completed 200 OK in 105ms (Views: 99.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-18 09:16:56 -0500
+Processing by ApplicationController#index as HTML
+  Rendering application/index.html.erb within layouts/application
+  Rendered application/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 104ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:16:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (16.5ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-11-18 09:16:59 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 69ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:16:59 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (37.9ms)
+Completed 200 OK in 131ms (Views: 129.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2019-11-18 09:17:02 -0500
+Started GET "/auth/facebook/callback?code=AQABrE5po0gQLYtjrcRrSE3dmlILXsKEdddRD-unyTOMAdSRl4S--fz4jzDSEk0EYduNQ4oOa4ybJpornVxit8VjeLeE2mswyF5aK4hWkLmFmh_Mb9Tl10_PVvNlUfzayC7nNN6bGJCefFZ82ui5zHJhGeI8UMEPhwMxqEfledIXTvG5goZvF-Cv9fZBgvcB7x910yZVTO0tdxqoMZuSGgVBjHEZGclMugaAQcDYRxu0t47RWSHtHTC2CFse16asKe2FvivEcoxGm7I0eNdybDe4wV2_2rZSoDknpMAWeaCEabQxkPYlVIRTQ8CembtPwa8&state=b495351f1c8da11437ee0b6d83cc98d47a25bb6895def833" for ::1 at 2019-11-18 09:17:03 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQABrE5po0gQLYtjrcRrSE3dmlILXsKEdddRD-unyTOMAdSRl4S--fz4jzDSEk0EYduNQ4oOa4ybJpornVxit8VjeLeE2mswyF5aK4hWkLmFmh_Mb9Tl10_PVvNlUfzayC7nNN6bGJCefFZ82ui5zHJhGeI8UMEPhwMxqEfledIXTvG5goZvF-Cv9fZBgvcB7x910yZVTO0tdxqoMZuSGgVBjHEZGclMugaAQcDYRxu0t47RWSHtHTC2CFse16asKe2FvivEcoxGm7I0eNdybDe4wV2_2rZSoDknpMAWeaCEabQxkPYlVIRTQ8CembtPwa8", "state"=>"b495351f1c8da11437ee0b6d83cc98d47a25bb6895def833", "provider"=>"facebook"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 102ms (ActiveRecord: 23.6ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:17:03 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Processing by ErrorsController#internal_server_error as HTML
+  Rendering errors/internal_server_error.html.erb
+  Rendered errors/internal_server_error.html.erb (15.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:17:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (14.5ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2019-11-18 09:17:12 -0500
+Started GET "/auth/facebook/callback?code=AQDV7bZN87TB8lHRYPH-o0gV2k__MDK53hii4PiajvdC1M5eHA1YwEOJ1aHV5u5v2Z4sb0Ett0jIJeEcrcj4rWde5sjN0wsSMj1pMHJIKTPiW3v6bWxmka-RvBwlT-nHf0Erh52HrHtpru1nrrlVofM_-9BYmXCp8WE2YHH_lnyRkKGxa_eruHAtYmQGEulkbsxlmhNUHpa2jzHBS9bYptdyPQ4CEV76bGki739yrw_7uG3lTEt31IAPC9_0Ehw3bxLETJVeH0joZTin8yHebPjnqK_Sq7jBM5bcmAcSdSyjxbLgf-H15zcouW1VBU8fqvo&state=e53d70278edbcacd8daa5377224421a8157a3bc01f1eac57" for ::1 at 2019-11-18 09:17:12 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDV7bZN87TB8lHRYPH-o0gV2k__MDK53hii4PiajvdC1M5eHA1YwEOJ1aHV5u5v2Z4sb0Ett0jIJeEcrcj4rWde5sjN0wsSMj1pMHJIKTPiW3v6bWxmka-RvBwlT-nHf0Erh52HrHtpru1nrrlVofM_-9BYmXCp8WE2YHH_lnyRkKGxa_eruHAtYmQGEulkbsxlmhNUHpa2jzHBS9bYptdyPQ4CEV76bGki739yrw_7uG3lTEt31IAPC9_0Ehw3bxLETJVeH0joZTin8yHebPjnqK_Sq7jBM5bcmAcSdSyjxbLgf-H15zcouW1VBU8fqvo", "state"=>"e53d70278edbcacd8daa5377224421a8157a3bc01f1eac57", "provider"=>"facebook"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 13ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:17:13 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Processing by ErrorsController#internal_server_error as HTML
+  Rendering errors/internal_server_error.html.erb
+  Rendered errors/internal_server_error.html.erb (23.1ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:17:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (7.7ms)
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2019-11-18 09:18:36 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mXqqywo69SRqGudw+7iyAGlHT+/QYl8f5ZY1ME8KAYLkdi/sy0+0vMfeSn7Q2ArX6MYCk/2gQ2cjA3y+OETpSQ==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-11-18 09:18:36 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:18:36 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (7.2ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2019-11-18 09:18:39 -0500
+Started GET "/auth/facebook/callback?code=AQAkoFnM55LeXNm-pj5xoVxJ53QNyPIxLkhdtyKKSD9ir_N2efGTgEqWNPQ3BiDM8lxbkRBJ9KDFCreKobPBw4wWtNPH4v1EBifQS6L4fwf3kxNwZsvQkgxAK4oPK-UfWzapJE-N1-LN1q3tggYMElTa3yA4983IMNmXo3hanssEROHtLmIM4nbHnRcJIVmkGQIO3oJoEaS-o1k8a1J5p9E8ctune7Dp1ZkUrTJbMWkBaxxCJCxyI0OEQw4LQZ7RqPmhvJ3UdFMmsOEIyJUf1FNur8Y-mtQUseGq9jDxVTElCHFPsEbWh5M7i54gL6nN5HA&state=78f4b39aec178561357a517a3babe03cae3c90b825f05b4a" for ::1 at 2019-11-18 09:18:39 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAkoFnM55LeXNm-pj5xoVxJ53QNyPIxLkhdtyKKSD9ir_N2efGTgEqWNPQ3BiDM8lxbkRBJ9KDFCreKobPBw4wWtNPH4v1EBifQS6L4fwf3kxNwZsvQkgxAK4oPK-UfWzapJE-N1-LN1q3tggYMElTa3yA4983IMNmXo3hanssEROHtLmIM4nbHnRcJIVmkGQIO3oJoEaS-o1k8a1J5p9E8ctune7Dp1ZkUrTJbMWkBaxxCJCxyI0OEQw4LQZ7RqPmhvJ3UdFMmsOEIyJUf1FNur8Y-mtQUseGq9jDxVTElCHFPsEbWh5M7i54gL6nN5HA", "state"=>"78f4b39aec178561357a517a3babe03cae3c90b825f05b4a", "provider"=>"facebook"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 9ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:18:40 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Processing by ErrorsController#internal_server_error as HTML
+  Rendering errors/internal_server_error.html.erb
+  Rendered errors/internal_server_error.html.erb (6.2ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:18:40 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (6.8ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:18:47 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/index.html.erb:34: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/index.html.erb:36: syntax error, unexpected end-of-input, expecting keyword_end
+Processing by ErrorsController#internal_server_error as HTML
+  Rendering errors/internal_server_error.html.erb
+  Rendered errors/internal_server_error.html.erb (10.9ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:18:47 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (6.9ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-11-18 09:19:22 -0500
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:19:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (6.6ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2019-11-18 09:19:25 -0500
+Started GET "/auth/facebook/callback?code=AQAdCHoECrvN1DLr_8GEvXRBP_nvLZeM2ChMwgk0s7ByNpm4h23kZK9XfQU5W0SrSj8aNUyG2K96N3rD3dMSEv8n0B5EEfV6PlGt8tCretkagkxIVgXlgGG1fhxnmq2KWQhEqo1WW6F5CeQqt6lqJ_flxEQB1OULWSAXFLgGfzZaEgR_wGzU3s4B2OCTBwEOJgNXRohfWNzyuWGfFDAgzGct8ZpTW7vn34_bsiCsE-GUOsMyFjm5bvB3pP_BMnTfww9R5qtnxzLc4na9NcxPzmwFQi5v7ZDUy8rXLzjDc2O2vFjs1GZpemgOKG2HiM9wf0k&state=7c17387940c1bd26a6863f353aa2dc0d45ba9b7eee520ec0" for ::1 at 2019-11-18 09:19:25 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAdCHoECrvN1DLr_8GEvXRBP_nvLZeM2ChMwgk0s7ByNpm4h23kZK9XfQU5W0SrSj8aNUyG2K96N3rD3dMSEv8n0B5EEfV6PlGt8tCretkagkxIVgXlgGG1fhxnmq2KWQhEqo1WW6F5CeQqt6lqJ_flxEQB1OULWSAXFLgGfzZaEgR_wGzU3s4B2OCTBwEOJgNXRohfWNzyuWGfFDAgzGct8ZpTW7vn34_bsiCsE-GUOsMyFjm5bvB3pP_BMnTfww9R5qtnxzLc4na9NcxPzmwFQi5v7ZDUy8rXLzjDc2O2vFjs1GZpemgOKG2HiM9wf0k", "state"=>"7c17387940c1bd26a6863f353aa2dc0d45ba9b7eee520ec0", "provider"=>"facebook"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 16ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:19:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^
+/Users/kristinkraemer/Desktop/webstuff/puppy_love/app/views/users/index.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/users/index.html.erb:35: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/users/index.html.erb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Processing by ErrorsController#internal_server_error as HTML
+  Rendering errors/internal_server_error.html.erb
+  Rendered errors/internal_server_error.html.erb (5.2ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:19:25 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (6.9ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2019-11-18 09:20:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 268ms (Views: 255.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:20:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (6.1ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2019-11-18 09:20:46 -0500
+Started GET "/auth/facebook/callback?code=AQD5ltCdvQf6LyhqjNnkpELTqMc-B7tiBemv6gRRzCvAo-Jqck6d86cIrxGimgTryZ834VspMhJqQJcnqbMRRoCuIOqs7tIgs16KcR3rHJrQCik55vT_x8Lipf2wTkQPyXmQGoKViB-BYw8oCsnB5KREifu87BUNr4Tc1-Mb6utDYPFauiZtwgUmXu6QEq6x1SNc0_SbF-IhswAD4zzWq83v-cE9a6x9mnH4Lx3FgpsHpFAFOsBNezNKlr1qUA4k0WkIYZhW3kPB0TZCNTMu254tlIQFKhpQj3WnVLgT2XaUSL6XtIC_etsMHsPYQoJjlOk&state=f4b60dfd4c90a3bbe4bfbf420f4afd7841c36cdb9be72c62" for ::1 at 2019-11-18 09:20:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD5ltCdvQf6LyhqjNnkpELTqMc-B7tiBemv6gRRzCvAo-Jqck6d86cIrxGimgTryZ834VspMhJqQJcnqbMRRoCuIOqs7tIgs16KcR3rHJrQCik55vT_x8Lipf2wTkQPyXmQGoKViB-BYw8oCsnB5KREifu87BUNr4Tc1-Mb6utDYPFauiZtwgUmXu6QEq6x1SNc0_SbF-IhswAD4zzWq83v-cE9a6x9mnH4Lx3FgpsHpFAFOsBNezNKlr1qUA4k0WkIYZhW3kPB0TZCNTMu254tlIQFKhpQj3WnVLgT2XaUSL6XtIC_etsMHsPYQoJjlOk", "state"=>"f4b60dfd4c90a3bbe4bfbf420f4afd7841c36cdb9be72c62", "provider"=>"facebook"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "kriskra@optonline.net"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 94ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users" for ::1 at 2019-11-18 09:20:46 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.6ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mMatch Load (0.6ms)[0m  [1m[34mSELECT "matches".* FROM "matches" WHERE "matches"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mDogBreed Load (0.6ms)[0m  [1m[34mSELECT "dog_breeds".* FROM "dog_breeds" INNER JOIN "matches" ON "dog_breeds"."id" = "matches"."dog_breed_id" WHERE "matches"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/index.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 131ms (Views: 120.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:20:46 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (10.6ms)
+Completed 200 OK in 70ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dog_breeds/21" for ::1 at 2019-11-18 09:21:01 -0500
+Processing by DogBreedsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mDogBreed Load (2.6ms)[0m  [1m[34mSELECT  "dog_breeds".* FROM "dog_breeds" WHERE "dog_breeds"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering dog_breeds/show.html.erb within layouts/application
+  [1m[36mAttsTable Load (0.3ms)[0m  [1m[34mSELECT  "atts_tables".* FROM "atts_tables" WHERE "atts_tables"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendered dog_breeds/_dog_info.html.erb (15.0ms)
+  Rendered dog_breeds/show.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 90ms (Views: 62.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/javascripts/application.js" for ::1 at 2019-11-18 09:21:01 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/application.js"):
+  
+actionpack (5.0.7.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.7.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.7) lib/rack/handler/webrick.rb:86:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/Users/kristinkraemer/.rvm/rubies/ruby-2.4.0/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Processing by ErrorsController#not_found as */*
+  Rendering errors/not_found.html.erb
+  Rendered errors/not_found.html.erb (5.8ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+

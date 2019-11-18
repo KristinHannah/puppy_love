@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
             @matches = User.find(params[:user_id]).matches 
             @user = User.find(params[:user_id])
         else  
-            @matches = User.find(session[:user_id]).matches
+           @matches = User.find(session[:user_id]).matches
         end 
     end 
 
