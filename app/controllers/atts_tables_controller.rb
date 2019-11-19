@@ -1,6 +1,6 @@
 class AttsTablesController < ApplicationController
     before_action :require_login
-    before_action :set_atts, only: [:show, :destroy] #do for other controllers
+    before_action :set_atts, only: [:show, :destroy] 
 
     def new 
         @atts_table = AttsTable.new(user_id: params[:user_id])
