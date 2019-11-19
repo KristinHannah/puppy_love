@@ -1,5 +1,6 @@
 class AttsTablesController < ApplicationController
     before_action :require_login
+    before_action :set_atts, only: [:show, :destroy] #do for other controllers
 
     def new 
         @atts_table = AttsTable.new(user_id: params[:user_id])
@@ -15,11 +16,10 @@ class AttsTablesController < ApplicationController
     end 
 
     def show 
-        @atts_table = AttsTable.find(params[:id])
+        
     end
 
     def destroy 
-        @atts_table = AttsTable.find(params[:id])
         @atts_table.destroy
 
         redirect_to users_path
@@ -27,6 +27,10 @@ class AttsTablesController < ApplicationController
 
 
     private 
+
+    def set_atts
+        @atts_table = AttsTable.find(params[:id])
+    end 
 
     def require_login 
         return head(:forbidden) unless session.include? :user_id
